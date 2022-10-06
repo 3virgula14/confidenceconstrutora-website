@@ -11,7 +11,6 @@ export default component$(() => {
         <li>Landing</li>
         <li>Quem somos</li>
         <li>Portifólio</li>
-        <span id="n-items">(0)</span>
       </ul>
      </nav> 
     </header>

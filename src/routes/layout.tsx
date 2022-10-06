@@ -11,9 +11,6 @@ export default component$(() => {
         </section>
       </main>
       <footer>
-      <h3 className="rodape-text">
-        Agradecimentos a todos que me dão força
-      </h3>
       </footer>
     </>
   );
