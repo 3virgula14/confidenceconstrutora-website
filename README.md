@@ -13,8 +13,3 @@ Website da Construtura Confidence de Vitória da Conquista
  - Content Manager Solutions
  - Desenvolvimento de telas
 
-## Static Site Generator (Node.js)
-
-```
-npm run ssg
-```
