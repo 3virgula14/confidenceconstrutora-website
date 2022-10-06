@@ -1,83 +1,47 @@
-import { componentQrl, inlinedQrl, useStylesScopedQrl, Slot, useContext, jsx as jsx$1, SkipRender, useEnvData, useStore, useContextProvider, useWatchQrl, useLexicalScope, noSerialize, createContext, useClientEffectQrl } from "@builder.io/qwik";
-import { jsxs, jsx, Fragment } from "@builder.io/qwik/jsx-runtime";
+import { componentQrl, inlinedQrl, useStylesScopedQrl, Slot, useContext, jsx as jsx$1, SkipRender, useEnvData, useStore, useContextProvider, useWatchQrl, useLexicalScope, noSerialize, createContext } from "@builder.io/qwik";
+import { jsx, jsxs, Fragment } from "@builder.io/qwik/jsx-runtime";
 import fetch$1, { Headers as Headers$1, Request, Response } from "node-fetch";
 import { renderToStream } from "@builder.io/qwik/server";
-const QwikLogo = () => /* @__PURE__ */ jsxs("svg", {
-  width: "100",
-  height: "35",
-  viewBox: "0 0 167 53",
-  fill: "none",
-  xmlns: "http://www.w3.org/2000/svg",
-  children: [
-    /* @__PURE__ */ jsx("path", {
-      d: "M81.9545 46.5859H75.5513V35.4045C73.4363 36.8579 71.0496 37.5749 68.4884 37.5749C65.0151 37.5749 62.4344 36.6253 60.8239 34.6487C59.2134 32.6915 58.3984 29.2034 58.3984 24.2231C58.3984 19.1266 59.3492 15.5997 61.2702 13.5456C63.23 11.4721 66.3734 10.4644 70.7004 10.4644C74.7946 10.4644 78.5201 11.0264 81.9545 12.131V46.5859ZM75.5513 16.278C74.096 15.8323 72.4661 15.6191 70.7004 15.6191C68.5272 15.6191 66.9749 16.1811 66.1017 17.3244C65.2479 18.4871 64.7823 20.6962 64.7823 23.9712C64.7823 27.0524 65.1897 29.1065 66.0435 30.2304C66.8973 31.335 68.3719 31.897 70.5452 31.897C73.3781 31.897 75.5513 30.7343 75.5513 29.2809V16.278Z",
-      fill: "black"
-    }),
-    /* @__PURE__ */ jsx("path", {
-      d: "M91.133 11.1426C93.4033 17.4406 95.3242 23.7386 96.993 30.0948C99.205 23.5836 101.087 17.2856 102.542 11.1426H108.15C110.265 17.4406 112.031 23.7386 113.447 30.0948C115.97 23.196 117.949 16.8787 119.404 11.1426H125.71C123.033 20.173 120.064 28.777 116.785 36.8966H109.256C108.402 32.3039 107.044 26.7617 105.22 20.1536C104.056 25.2889 102.445 30.8893 100.33 36.8966H92.8018C90.2793 27.5174 87.5434 18.9522 84.6328 11.1426H91.133Z",
-      fill: "black"
-    }),
-    /* @__PURE__ */ jsx("path", {
-      d: "M132.832 7.55758C129.999 7.55758 129.203 6.85996 129.203 3.97257C129.203 1.39523 130.018 0.794495 132.832 0.794495C135.665 0.794495 136.46 1.39523 136.46 3.97257C136.46 6.85996 135.665 7.55758 132.832 7.55758ZM129.649 11.1426H136.053V36.8966H129.649V11.1426Z",
-      fill: "black"
-    }),
-    /* @__PURE__ */ jsx("path", {
-      d: "M166.303 11.1426C161.763 17.5956 158.581 21.5295 156.815 22.9441C158.27 23.8937 162.17 28.8933 167.002 36.916H159.628C153.613 27.7887 150.742 23.8549 149.325 23.2542V36.916H142.922V0H149.325V23.2348C150.78 22.169 153.963 18.1382 158.872 11.1426H166.303Z",
-      fill: "black"
-    }),
-    /* @__PURE__ */ jsx("path", {
-      d: "M40.973 52.5351L32.0861 43.6985L31.9503 43.7179V43.621L13.0511 24.9595L17.708 20.4637L14.9721 4.76715L1.99103 20.8513C-0.220992 23.0798 -0.628467 26.7036 0.962635 29.3778L9.07337 42.8265C10.3152 44.9 12.566 46.1402 14.9915 46.1208L19.0081 46.082L40.973 52.5351Z",
-      fill: "#18B6F6"
-    }),
-    /* @__PURE__ */ jsx("path", {
-      d: "M45.8232 20.5411L44.038 17.2468L43.1066 15.5609L42.738 14.902L42.6992 14.9408L37.8094 6.47238C36.587 4.34075 34.2974 3.02301 31.8137 3.04239L27.5255 3.15865L14.7384 3.19741C12.313 3.21679 10.101 4.49577 8.87853 6.56927L1.09766 21.9945L15.0101 4.72831L33.2496 24.7656L30.0091 28.0406L31.9495 43.7178L31.9689 43.679V43.7178H31.9301L31.9689 43.7565L33.4824 45.2293L40.8364 52.4187C41.1469 52.7094 41.6514 52.3606 41.4379 51.9924L36.8975 43.0589L44.8142 28.4282L45.0664 28.1375C45.1634 28.0212 45.2604 27.905 45.3381 27.7887C46.8904 25.6764 47.1038 22.8472 45.8232 20.5411Z",
-      fill: "#AC7EF4"
-    }),
-    /* @__PURE__ */ jsx("path", {
-      d: "M33.3076 24.6882L15.0099 4.74774L17.61 20.3668L12.9531 24.882L31.9105 43.6985L30.203 28.0794L33.3076 24.6882Z",
-      fill: "white"
-    })
-  ]
-});
-const styles$1 = "header {\n  background: var(--qwik-purple);\n}\nheader {\n  display: flex;\n  background: white;\n  border-bottom: 10px solid var(--qwik-dark-purple);\n}\n\nheader .logo a {\n  display: inline-block;\n  padding: 10px 10px 7px 20px;\n}\n\nheader ul {\n  margin: 0;\n  padding: 3px 10px 0 0;\n  list-style: none;\n  flex: 1;\n  text-align: right;\n}\n\nheader li {\n  display: inline-block;\n  margin: 0;\n  padding: 0;\n}\n\nheader li a {\n  display: inline-block;\n  padding: 15px 10px;\n  text-decoration: none;\n}\n\nheader li a:hover {\n  text-decoration: underline;\n}\n";
+const styles = "header{}";
 const Header = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
-  useStylesScopedQrl(inlinedQrl(styles$1, "s_N39ca0w8E8Y"));
-  return /* @__PURE__ */ jsxs("header", {
-    children: [
-      /* @__PURE__ */ jsx("div", {
-        class: "logo",
-        children: /* @__PURE__ */ jsx("a", {
-          href: "https://qwik.builder.io/",
-          target: "_blank",
-          children: /* @__PURE__ */ jsx(QwikLogo, {})
-        })
-      }),
-      /* @__PURE__ */ jsxs("ul", {
+  useStylesScopedQrl(inlinedQrl(styles, "s_N39ca0w8E8Y"));
+  return /* @__PURE__ */ jsx("header", {
+    children: /* @__PURE__ */ jsx("nav", {
+      children: /* @__PURE__ */ jsxs("ul", {
         children: [
           /* @__PURE__ */ jsx("li", {
-            children: /* @__PURE__ */ jsx("a", {
-              href: "https://qwik.builder.io/docs/components/overview/",
-              target: "_blank",
-              children: "Docs"
-            })
+            children: "Landing"
           }),
           /* @__PURE__ */ jsx("li", {
-            children: /* @__PURE__ */ jsx("a", {
-              href: "https://qwik.builder.io/examples/introduction/hello-world/",
-              target: "_blank",
-              children: "Examples"
-            })
+            children: "Quem somos"
           }),
           /* @__PURE__ */ jsx("li", {
-            children: /* @__PURE__ */ jsx("a", {
-              href: "https://qwik.builder.io/tutorial/welcome/overview/",
-              target: "_blank",
-              children: "Tutorials"
-            })
+            children: "Portif\xF3lio"
+          }),
+          /* @__PURE__ */ jsxs("div", {
+            id: "acesso",
+            children: [
+              /* @__PURE__ */ jsx("button", {
+                id: "acessar",
+                children: "Acessar"
+              }),
+              /* @__PURE__ */ jsxs("span", {
+                id: "itens",
+                children: [
+                  /* @__PURE__ */ jsx("icon", {
+                    id: "carrinho"
+                  }),
+                  /* @__PURE__ */ jsx("span", {
+                    id: "n-items",
+                    children: "(0)"
+                  })
+                ]
+              })
+            ]
           })
         ]
       })
-    ]
+    })
   });
 }, "s_ceU05TscGYE"));
 const layout = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
@@ -92,10 +56,9 @@ const layout = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
         ]
       }),
       /* @__PURE__ */ jsx("footer", {
-        children: /* @__PURE__ */ jsx("a", {
-          href: "https://www.builder.io/",
-          target: "_blank",
-          children: "Made with \u2661 by Builder.io"
+        children: /* @__PURE__ */ jsx("h3", {
+          className: "rodape-text",
+          children: "Agradecimentos a todos que me d\xE3o for\xE7a"
         })
       })
     ]
@@ -105,674 +68,43 @@ const Layout_ = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
   __proto__: null,
   default: layout
 }, Symbol.toStringTag, { value: "Module" }));
-const isServer = true;
-const isBrowser = false;
-const ContentContext = /* @__PURE__ */ createContext("qc-c");
-const ContentInternalContext = /* @__PURE__ */ createContext("qc-ic");
-const DocumentHeadContext = /* @__PURE__ */ createContext("qc-h");
-const RouteLocationContext = /* @__PURE__ */ createContext("qc-l");
-const RouteNavigateContext = /* @__PURE__ */ createContext("qc-n");
-const RouterOutlet = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
-  const { contents } = useContext(ContentInternalContext);
-  if (contents && contents.length > 0) {
-    const contentsLen = contents.length;
-    let cmp = null;
-    for (let i = contentsLen - 1; i >= 0; i--)
-      cmp = jsx$1(contents[i].default, {
-        children: cmp
-      });
-    return cmp;
-  }
-  return SkipRender;
-}, "RouterOutlet_component_nd8yk3KO22c"));
-const MODULE_CACHE$1 = /* @__PURE__ */ new WeakMap();
-const loadRoute$1 = async (routes2, menus2, cacheModules2, pathname) => {
-  if (Array.isArray(routes2))
-    for (const route of routes2) {
-      const match = route[0].exec(pathname);
-      if (match) {
-        const loaders = route[1];
-        const params = getRouteParams$1(route[2], match);
-        const routeBundleNames = route[4];
-        const mods = new Array(loaders.length);
-        const pendingLoads = [];
-        const menuLoader = getMenuLoader$1(menus2, pathname);
-        let menu = void 0;
-        loaders.forEach((moduleLoader, i) => {
-          loadModule$1(moduleLoader, pendingLoads, (routeModule) => mods[i] = routeModule, cacheModules2);
-        });
-        loadModule$1(menuLoader, pendingLoads, (menuModule) => menu = menuModule == null ? void 0 : menuModule.default, cacheModules2);
-        if (pendingLoads.length > 0)
-          await Promise.all(pendingLoads);
-        return [
-          params,
-          mods,
-          menu,
-          routeBundleNames
-        ];
-      }
-    }
-  return null;
-};
-const loadModule$1 = (moduleLoader, pendingLoads, moduleSetter, cacheModules2) => {
-  if (typeof moduleLoader === "function") {
-    const loadedModule = MODULE_CACHE$1.get(moduleLoader);
-    if (loadedModule)
-      moduleSetter(loadedModule);
-    else {
-      const l = moduleLoader();
-      if (typeof l.then === "function")
-        pendingLoads.push(l.then((loadedModule2) => {
-          if (cacheModules2 !== false)
-            MODULE_CACHE$1.set(moduleLoader, loadedModule2);
-          moduleSetter(loadedModule2);
-        }));
-      else if (l)
-        moduleSetter(l);
-    }
-  }
-};
-const getMenuLoader$1 = (menus2, pathname) => {
-  if (menus2) {
-    const menu = menus2.find((m) => m[0] === pathname || pathname.startsWith(m[0] + (pathname.endsWith("/") ? "" : "/")));
-    if (menu)
-      return menu[1];
-  }
-  return void 0;
-};
-const getRouteParams$1 = (paramNames, match) => {
-  const params = {};
-  if (paramNames)
-    for (let i = 0; i < paramNames.length; i++)
-      params[paramNames[i]] = match ? match[i + 1] : "";
-  return params;
-};
-const resolveHead = (endpoint, routeLocation, contentModules) => {
-  const head2 = createDocumentHead();
-  const headProps = {
-    data: endpoint ? endpoint.body : null,
-    head: head2,
-    ...routeLocation
-  };
-  for (let i = contentModules.length - 1; i >= 0; i--) {
-    const contentModuleHead = contentModules[i] && contentModules[i].head;
-    if (contentModuleHead) {
-      if (typeof contentModuleHead === "function")
-        resolveDocumentHead(head2, contentModuleHead(headProps));
-      else if (typeof contentModuleHead === "object")
-        resolveDocumentHead(head2, contentModuleHead);
-    }
-  }
-  return headProps.head;
-};
-const resolveDocumentHead = (resolvedHead, updatedHead) => {
-  if (typeof updatedHead.title === "string")
-    resolvedHead.title = updatedHead.title;
-  mergeArray(resolvedHead.meta, updatedHead.meta);
-  mergeArray(resolvedHead.links, updatedHead.links);
-  mergeArray(resolvedHead.styles, updatedHead.styles);
-};
-const mergeArray = (existingArr, newArr) => {
-  if (Array.isArray(newArr))
-    for (const newItem of newArr) {
-      if (typeof newItem.key === "string") {
-        const existingIndex = existingArr.findIndex((i) => i.key === newItem.key);
-        if (existingIndex > -1) {
-          existingArr[existingIndex] = newItem;
-          continue;
-        }
-      }
-      existingArr.push(newItem);
-    }
-};
-const createDocumentHead = () => ({
-  title: "",
-  meta: [],
-  links: [],
-  styles: []
-});
-const useDocumentHead = () => useContext(DocumentHeadContext);
-const useLocation = () => useContext(RouteLocationContext);
-const useNavigate = () => useContext(RouteNavigateContext);
-const useQwikCityEnv = () => noSerialize(useEnvData("qwikcity"));
-const toPath = (url) => url.pathname + url.search + url.hash;
-const toUrl = (url, baseUrl) => new URL(url, baseUrl.href);
-const isSameOrigin = (a, b) => a.origin === b.origin;
-const isSamePath = (a, b) => a.pathname + a.search === b.pathname + b.search;
-const isSamePathname = (a, b) => a.pathname === b.pathname;
-const isSameOriginDifferentPathname = (a, b) => isSameOrigin(a, b) && !isSamePath(a, b);
-const getClientEndpointPath = (pathname) => pathname + (pathname.endsWith("/") ? "" : "/") + "q-data.json";
-const getClientNavPath = (props, baseUrl) => {
-  const href = props.href;
-  if (typeof href === "string" && href.trim() !== "" && typeof props.target !== "string")
-    try {
-      const linkUrl = toUrl(href, baseUrl);
-      const currentUrl = toUrl("", baseUrl);
-      if (isSameOrigin(linkUrl, currentUrl))
-        return toPath(linkUrl);
-    } catch (e) {
-      console.error(e);
-    }
-  return null;
-};
-const getPrefetchUrl = (props, clientNavPath, currentLoc) => {
-  if (props.prefetch && clientNavPath) {
-    const prefetchUrl = toUrl(clientNavPath, currentLoc);
-    if (!isSamePathname(prefetchUrl, toUrl("", currentLoc)))
-      return prefetchUrl + "";
-  }
-  return null;
-};
-const clientNavigate = (win, routeNavigate) => {
-  const currentUrl = win.location;
-  const newUrl = toUrl(routeNavigate.path, currentUrl);
-  if (isSameOriginDifferentPathname(currentUrl, newUrl)) {
-    handleScroll(win, currentUrl, newUrl);
-    win.history.pushState("", "", toPath(newUrl));
-  }
-  if (!win[CLIENT_HISTORY_INITIALIZED]) {
-    win[CLIENT_HISTORY_INITIALIZED] = 1;
-    win.addEventListener("popstate", () => {
-      const currentUrl2 = win.location;
-      const previousUrl = toUrl(routeNavigate.path, currentUrl2);
-      if (isSameOriginDifferentPathname(currentUrl2, previousUrl)) {
-        handleScroll(win, previousUrl, currentUrl2);
-        routeNavigate.path = toPath(currentUrl2);
-      }
-    });
-  }
-};
-const handleScroll = async (win, previousUrl, newUrl) => {
-  const doc = win.document;
-  const newHash = newUrl.hash;
-  if (isSamePath(previousUrl, newUrl)) {
-    if (previousUrl.hash !== newHash) {
-      await domWait();
-      if (newHash)
-        scrollToHashId(doc, newHash);
-      else
-        win.scrollTo(0, 0);
-    }
-  } else {
-    if (newHash)
-      for (let i = 0; i < 24; i++) {
-        await domWait();
-        if (scrollToHashId(doc, newHash))
-          break;
-      }
-    else {
-      await domWait();
-      win.scrollTo(0, 0);
-    }
-  }
-};
-const domWait = () => new Promise((resolve) => setTimeout(resolve, 12));
-const scrollToHashId = (doc, hash) => {
-  const elmId = hash.slice(1);
-  const elm = doc.getElementById(elmId);
-  if (elm)
-    elm.scrollIntoView();
-  return elm;
-};
-const dispatchPrefetchEvent = (prefetchData) => dispatchEvent(new CustomEvent("qprefetch", {
-  detail: prefetchData
-}));
-const CLIENT_HISTORY_INITIALIZED = /* @__PURE__ */ Symbol();
-const loadClientData = async (href) => {
-  const { cacheModules: cacheModules2 } = await Promise.resolve().then(() => _qwikCityPlan);
-  const pagePathname = new URL(href).pathname;
-  const endpointUrl = getClientEndpointPath(pagePathname);
-  const now = Date.now();
-  const expiration = cacheModules2 ? 6e5 : 15e3;
-  const cachedClientPageIndex = cachedClientPages.findIndex((c) => c.u === endpointUrl);
-  let cachedClientPageData = cachedClientPages[cachedClientPageIndex];
-  dispatchPrefetchEvent({
-    links: [
-      pagePathname
-    ]
-  });
-  if (!cachedClientPageData || cachedClientPageData.t + expiration < now) {
-    cachedClientPageData = {
-      u: endpointUrl,
-      t: now,
-      c: new Promise((resolve) => {
-        fetch(endpointUrl).then((clientResponse) => {
-          const contentType = clientResponse.headers.get("content-type") || "";
-          if (clientResponse.ok && contentType.includes("json"))
-            clientResponse.json().then((clientData) => {
-              dispatchPrefetchEvent({
-                bundles: clientData.prefetch,
-                links: [
-                  pagePathname
-                ]
-              });
-              resolve(clientData);
-            }, () => resolve(null));
-          else
-            resolve(null);
-        }, () => resolve(null));
-      })
-    };
-    for (let i = cachedClientPages.length - 1; i >= 0; i--)
-      if (cachedClientPages[i].t + expiration < now)
-        cachedClientPages.splice(i, 1);
-    cachedClientPages.push(cachedClientPageData);
-  }
-  cachedClientPageData.c.catch((e) => console.error(e));
-  return cachedClientPageData.c;
-};
-const cachedClientPages = [];
-const QwikCity = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
-  const env = useQwikCityEnv();
-  if (!(env == null ? void 0 : env.params))
-    throw new Error(`Missing Qwik City Env Data`);
-  const urlEnv = useEnvData("url");
-  if (!urlEnv)
-    throw new Error(`Missing Qwik URL Env Data`);
-  const url = new URL(urlEnv);
-  const routeLocation = useStore({
-    href: url.href,
-    pathname: url.pathname,
-    query: Object.fromEntries(url.searchParams.entries()),
-    params: env.params
-  });
-  const routeNavigate = useStore({
-    path: toPath(url)
-  });
-  const documentHead = useStore(createDocumentHead);
-  const content = useStore({
-    headings: void 0,
-    menu: void 0
-  });
-  const contentInternal = useStore({
-    contents: void 0
-  });
-  useContextProvider(ContentContext, content);
-  useContextProvider(ContentInternalContext, contentInternal);
-  useContextProvider(DocumentHeadContext, documentHead);
-  useContextProvider(RouteLocationContext, routeLocation);
-  useContextProvider(RouteNavigateContext, routeNavigate);
-  useWatchQrl(inlinedQrl(async ({ track }) => {
-    const [content2, contentInternal2, documentHead2, env2, routeLocation2, routeNavigate2] = useLexicalScope();
-    const { routes: routes2, menus: menus2, cacheModules: cacheModules2 } = await Promise.resolve().then(() => _qwikCityPlan);
-    const path = track(routeNavigate2, "path");
-    const url2 = new URL(path, routeLocation2.href);
-    const pathname = url2.pathname;
-    const loadRoutePromise = loadRoute$1(routes2, menus2, cacheModules2, pathname);
-    const endpointResponse = isServer ? env2.response : loadClientData(url2.href);
-    const loadedRoute = await loadRoutePromise;
-    if (loadedRoute) {
-      const [params, mods, menu] = loadedRoute;
-      const contentModules = mods;
-      const pageModule = contentModules[contentModules.length - 1];
-      routeLocation2.href = url2.href;
-      routeLocation2.pathname = pathname;
-      routeLocation2.params = {
-        ...params
-      };
-      routeLocation2.query = Object.fromEntries(url2.searchParams.entries());
-      content2.headings = pageModule.headings;
-      content2.menu = menu;
-      contentInternal2.contents = noSerialize(contentModules);
-      const clientPageData = await endpointResponse;
-      const resolvedHead = resolveHead(clientPageData, routeLocation2, contentModules);
-      documentHead2.links = resolvedHead.links;
-      documentHead2.meta = resolvedHead.meta;
-      documentHead2.styles = resolvedHead.styles;
-      documentHead2.title = resolvedHead.title;
-      if (isBrowser)
-        clientNavigate(window, routeNavigate2);
-    }
-  }, "QwikCity_component_useWatch_AaAlzKH0KlQ", [
-    content,
-    contentInternal,
-    documentHead,
-    env,
-    routeLocation,
-    routeNavigate
-  ]));
-  return /* @__PURE__ */ jsx(Slot, {});
-}, "QwikCity_component_z1nvHyEppoI"));
-const Link = /* @__PURE__ */ componentQrl(inlinedQrl((props) => {
-  const nav = useNavigate();
-  const loc = useLocation();
-  const originalHref = props.href;
-  const linkProps = {
-    ...props
-  };
-  const clientNavPath = getClientNavPath(linkProps, loc);
-  const prefetchUrl = getPrefetchUrl(props, clientNavPath, loc);
-  linkProps["preventdefault:click"] = !!clientNavPath;
-  linkProps.href = clientNavPath || originalHref;
-  return /* @__PURE__ */ jsx("a", {
-    ...linkProps,
-    onClick$: inlinedQrl(() => {
-      const [clientNavPath2, linkProps2, nav2] = useLexicalScope();
-      if (clientNavPath2)
-        nav2.path = linkProps2.href;
-    }, "Link_component_a_onClick_hA9UPaY8sNQ", [
-      clientNavPath,
-      linkProps,
-      nav
-    ]),
-    "data-prefetch": prefetchUrl,
-    onMouseOver$: inlinedQrl((_, elm) => prefetchLinkResources(elm), "Link_component_a_onMouseOver_skxgNVWVOT8"),
-    onQVisible$: inlinedQrl((_, elm) => prefetchLinkResources(elm, true), "Link_component_a_onQVisible_uVE5iM9H73c"),
-    children: /* @__PURE__ */ jsx(Slot, {})
-  });
-}, "Link_component_mYsiJcA4IBc"));
-const prefetchLinkResources = (elm, isOnVisible) => {
-  var _a2;
-  const prefetchUrl = (_a2 = elm == null ? void 0 : elm.dataset) == null ? void 0 : _a2.prefetch;
-  if (prefetchUrl) {
-    if (!windowInnerWidth)
-      windowInnerWidth = window.innerWidth;
-    if (!isOnVisible || isOnVisible && windowInnerWidth < 520)
-      loadClientData(prefetchUrl);
-  }
-};
-let windowInnerWidth = 0;
-const swRegister = '((s,a,r,i)=>{r=(e,t)=>{t=document.querySelector("[q\\\\:base]"),t&&a.active&&a.active.postMessage({type:"qprefetch",base:t.getAttribute("q:base"),...e})},addEventListener("qprefetch",e=>{const t=e.detail;a?r(t):t.bundles&&s.push(...t.bundles)}),navigator.serviceWorker.register("/service-worker.js").then(e=>{i=()=>{a=e,r({bundles:s})},e.installing?e.installing.addEventListener("statechange",t=>{t.target.state=="activated"&&i()}):e.active&&i()}).catch(e=>console.error(e))})([])';
-const ServiceWorkerRegister = () => jsx$1("script", {
-  dangerouslySetInnerHTML: swRegister
-});
-const index$1 = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
-  return /* @__PURE__ */ jsxs("div", {
-    children: [
-      /* @__PURE__ */ jsxs("h1", {
-        children: [
-          "Welcome to Qwik ",
-          /* @__PURE__ */ jsx("span", {
-            class: "lightning",
-            children: "\u26A1\uFE0F"
-          })
-        ]
-      }),
-      /* @__PURE__ */ jsxs("ul", {
-        children: [
-          /* @__PURE__ */ jsxs("li", {
-            children: [
-              "Check out the ",
-              /* @__PURE__ */ jsx("code", {
-                children: "src/routes"
-              }),
-              " directory to get started."
-            ]
-          }),
-          /* @__PURE__ */ jsxs("li", {
-            children: [
-              "Add integrations with ",
-              /* @__PURE__ */ jsx("code", {
-                children: "npm run qwik add"
-              }),
-              "."
-            ]
-          }),
-          /* @__PURE__ */ jsxs("li", {
-            children: [
-              "More info about development in ",
-              /* @__PURE__ */ jsx("code", {
-                children: "README.md"
-              })
-            ]
-          })
-        ]
-      }),
-      /* @__PURE__ */ jsx("h2", {
-        children: "Commands"
-      }),
-      /* @__PURE__ */ jsxs("table", {
-        class: "commands",
-        children: [
-          /* @__PURE__ */ jsxs("tr", {
-            children: [
-              /* @__PURE__ */ jsx("td", {
-                children: /* @__PURE__ */ jsx("code", {
-                  children: "npm run dev"
-                })
-              }),
-              /* @__PURE__ */ jsx("td", {
-                children: "Start the dev server and watch for changes."
-              })
-            ]
-          }),
-          /* @__PURE__ */ jsxs("tr", {
-            children: [
-              /* @__PURE__ */ jsx("td", {
-                children: /* @__PURE__ */ jsx("code", {
-                  children: "npm run preview"
-                })
-              }),
-              /* @__PURE__ */ jsx("td", {
-                children: "Production build and start preview server."
-              })
-            ]
-          }),
-          /* @__PURE__ */ jsxs("tr", {
-            children: [
-              /* @__PURE__ */ jsx("td", {
-                children: /* @__PURE__ */ jsx("code", {
-                  children: "npm run build"
-                })
-              }),
-              /* @__PURE__ */ jsx("td", {
-                children: "Production build."
-              })
-            ]
-          }),
-          /* @__PURE__ */ jsxs("tr", {
-            children: [
-              /* @__PURE__ */ jsx("td", {
-                children: /* @__PURE__ */ jsx("code", {
-                  children: "npm run qwik add"
-                })
-              }),
-              /* @__PURE__ */ jsx("td", {
-                children: "Select an integration to add."
-              })
-            ]
-          })
-        ]
-      }),
-      /* @__PURE__ */ jsx("h2", {
-        children: "Add Integrations"
-      }),
-      /* @__PURE__ */ jsxs("table", {
-        class: "commands",
-        children: [
-          /* @__PURE__ */ jsxs("tr", {
-            children: [
-              /* @__PURE__ */ jsx("td", {
-                children: /* @__PURE__ */ jsx("code", {
-                  children: "npm run qwik add cloudflare-pages"
-                })
-              }),
-              /* @__PURE__ */ jsx("td", {
-                children: /* @__PURE__ */ jsx("a", {
-                  href: "https://developers.cloudflare.com/pages",
-                  target: "_blank",
-                  children: "Cloudflare Pages Server"
-                })
-              })
-            ]
-          }),
-          /* @__PURE__ */ jsxs("tr", {
-            children: [
-              /* @__PURE__ */ jsx("td", {
-                children: /* @__PURE__ */ jsx("code", {
-                  children: "npm run qwik add express"
-                })
-              }),
-              /* @__PURE__ */ jsx("td", {
-                children: /* @__PURE__ */ jsx("a", {
-                  href: "https://expressjs.com/",
-                  target: "_blank",
-                  children: "Nodejs Express Server"
-                })
-              })
-            ]
-          }),
-          /* @__PURE__ */ jsxs("tr", {
-            children: [
-              /* @__PURE__ */ jsx("td", {
-                children: /* @__PURE__ */ jsx("code", {
-                  children: "npm run qwik add netlify-edge"
-                })
-              }),
-              /* @__PURE__ */ jsx("td", {
-                children: /* @__PURE__ */ jsx("a", {
-                  href: "https://docs.netlify.com/",
-                  target: "_blank",
-                  children: "Netlify Edge Functions"
-                })
-              })
-            ]
-          }),
-          /* @__PURE__ */ jsxs("tr", {
-            children: [
-              /* @__PURE__ */ jsx("td", {
-                children: /* @__PURE__ */ jsx("code", {
-                  children: "npm run qwik add static-node"
-                })
-              }),
-              /* @__PURE__ */ jsx("td", {
-                children: /* @__PURE__ */ jsx("a", {
-                  href: "https://qwik.builder.io/qwikcity/static-site-generation/overview/",
-                  target: "_blank",
-                  children: "Static Site Generation (SSG)"
-                })
-              })
-            ]
-          })
-        ]
-      }),
-      /* @__PURE__ */ jsx("h2", {
-        children: "Community"
-      }),
-      /* @__PURE__ */ jsxs("ul", {
-        children: [
-          /* @__PURE__ */ jsxs("li", {
-            children: [
-              /* @__PURE__ */ jsx("span", {
-                children: "Questions or just want to say hi? "
-              }),
-              /* @__PURE__ */ jsx("a", {
-                href: "https://qwik.builder.io/chat",
-                target: "_blank",
-                children: "Chat on discord!"
-              })
-            ]
-          }),
-          /* @__PURE__ */ jsxs("li", {
-            children: [
-              /* @__PURE__ */ jsx("span", {
-                children: "Follow "
-              }),
-              /* @__PURE__ */ jsx("a", {
-                href: "https://twitter.com/QwikDev",
-                target: "_blank",
-                children: "@QwikDev"
-              }),
-              /* @__PURE__ */ jsx("span", {
-                children: " on Twitter"
-              })
-            ]
-          }),
-          /* @__PURE__ */ jsxs("li", {
-            children: [
-              /* @__PURE__ */ jsx("span", {
-                children: "Open issues and contribute on "
-              }),
-              /* @__PURE__ */ jsx("a", {
-                href: "https://github.com/BuilderIO/qwik",
-                target: "_blank",
-                children: "Github"
-              })
-            ]
-          })
-        ]
-      }),
-      /* @__PURE__ */ jsx(Link, {
-        class: "mindblow",
-        href: "/flower",
-        children: "Blow my mind \u{1F92F}"
-      })
-    ]
+const index$2 = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
+  return /* @__PURE__ */ jsx("div", {
+    id: "content",
+    children: "conte\xFAdo do index"
   });
 }, "s_xYL1qOwPyDI"));
-const head$1 = {
+const head = {
   title: "Welcome to Qwik"
 };
 const Index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: index$1,
-  head: head$1
-}, Symbol.toStringTag, { value: "Module" }));
-const styles = ".host {\n  display: grid;\n\n  align-items: center;\n  justify-content: center;\n  justify-items: center;\n  --rotation: 135deg;\n  --rotation: 225deg;\n  --size-step: 10px;\n  --odd-color-step: 5;\n  --even-color-step: 5;\n  --center: 12;\n\n  width: 100%;\n  height: 500px;\n\n  contain: strict;\n}\n\ninput {\n  width: 100%;\n}\n\n.square {\n  --size: calc(40px + var(--index) * var(--size-step));\n\n  display: block;\n  width: var(--size);\n  height: var(--size);\n  transform: rotateZ(calc(var(--rotation) * var(--state) * (var(--center) - var(--index))));\n  transition-property: transform, border-color;\n  transition-duration: 5s;\n  transition-timing-function: ease-in-out;\n  grid-area: 1 / 1;\n  background: white;\n  border-width: 2px;\n  border-style: solid;\n  border-color: black;\n  box-sizing: border-box;\n  will-change: transform, border-color;\n\n  contain: strict;\n}\n\n.square.odd {\n  --luminance: calc(1 - calc(calc(var(--index) * var(--odd-color-step)) / 256));\n  background: rgb(\n    calc(172 * var(--luminance)),\n    calc(127 * var(--luminance)),\n    calc(244 * var(--luminance))\n  );\n}\n\n.pride .square:nth-child(12n + 1) {\n  background: #e70000;\n}\n.pride .square:nth-child(12n + 3) {\n  background: #ff8c00;\n}\n.pride .square:nth-child(12n + 5) {\n  background: #ffef00;\n}\n.pride .square:nth-child(12n + 7) {\n  background: #00811f;\n}\n.pride .square:nth-child(12n + 9) {\n  background: #0044ff;\n}\n.pride .square:nth-child(12n + 11) {\n  background: #760089;\n}\n";
-const index = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
-  useStylesScopedQrl(inlinedQrl(styles, "s_p4UiTwsJc7c"));
-  const loc = useLocation();
-  const state = useStore({
-    count: 0,
-    number: 20
-  });
-  useClientEffectQrl(inlinedQrl(({ cleanup }) => {
-    const [state2] = useLexicalScope();
-    const timeout = setTimeout(() => state2.count = 1, 500);
-    cleanup(() => clearTimeout(timeout));
-    const internal = setInterval(() => state2.count++, 7e3);
-    cleanup(() => clearInterval(internal));
-  }, "s_V0Y6u0VD1eY", [
-    state
-  ]));
-  return /* @__PURE__ */ jsxs(Fragment, {
-    children: [
-      /* @__PURE__ */ jsx("input", {
-        type: "range",
-        value: state.number,
-        max: 50,
-        onInput$: inlinedQrl((ev) => {
-          const [state2] = useLexicalScope();
-          state2.number = ev.target.valueAsNumber;
-        }, "s_dznIGAlrcag", [
-          state
-        ])
-      }),
-      /* @__PURE__ */ jsx("div", {
-        style: {
-          "--state": `${state.count * 0.1}`
-        },
-        class: {
-          host: true,
-          pride: loc.query["pride"] === "true"
-        },
-        children: Array.from({
-          length: state.number
-        }, (_, i) => /* @__PURE__ */ jsx("div", {
-          class: {
-            square: true,
-            odd: i % 2 === 0
-          },
-          style: {
-            "--index": `${i + 1}`
-          }
-        }, i)).reverse()
-      })
-    ]
-  });
-}, "s_OW4nu0I1yZ8"));
-const head = {
-  title: "Qwik Flower"
-};
-const Flower = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: index,
+  default: index$2,
   head
+}, Symbol.toStringTag, { value: "Module" }));
+const index$1 = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
+  return /* @__PURE__ */ jsx("div", {
+    id: ""
+  });
+}, "s_hGK5aNZYjtw"));
+const Portifolio = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: index$1
+}, Symbol.toStringTag, { value: "Module" }));
+const index = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
+  return /* @__PURE__ */ jsx("div", {
+    id: ""
+  });
+}, "s_flbgQB75nqU"));
+const Quemsomos = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: index
 }, Symbol.toStringTag, { value: "Module" }));
 const Layout = () => Layout_;
 const routes = [
-  [/^\/$/, [Layout, () => Index], void 0, "/", ["q-12e642bf.js", "q-5c3dcd0e.js"]],
-  [/^\/flower\/?$/, [Layout, () => Flower], void 0, "/flower", ["q-12e642bf.js", "q-caae95b2.js"]]
+  [/^\/$/, [Layout, () => Index], void 0, "/", ["q-d312b128.js", "q-d1379dc0.js"]],
+  [/^\/portifolio\/?$/, [Layout, () => Portifolio], void 0, "/portifolio", ["q-d312b128.js", "q-e17920fb.js"]],
+  [/^\/quemsomos\/?$/, [Layout, () => Quemsomos], void 0, "/quemsomos", ["q-d312b128.js", "q-2d41746e.js"]]
 ];
 const menus = [];
 const trailingSlash = false;
@@ -942,28 +274,28 @@ function minimalHtmlResponse(status, message, stack) {
 }
 var COLOR_400 = "#006ce9";
 var COLOR_500 = "#713fc2";
-var MODULE_CACHE = /* @__PURE__ */ new WeakMap();
-var loadRoute = async (routes2, menus2, cacheModules2, pathname) => {
+var MODULE_CACHE$1 = /* @__PURE__ */ new WeakMap();
+var loadRoute$1 = async (routes2, menus2, cacheModules2, pathname) => {
   if (Array.isArray(routes2)) {
     for (const route of routes2) {
       const match = route[0].exec(pathname);
       if (match) {
         const loaders = route[1];
-        const params = getRouteParams(route[2], match);
+        const params = getRouteParams$1(route[2], match);
         const routeBundleNames = route[4];
         const mods = new Array(loaders.length);
         const pendingLoads = [];
-        const menuLoader = getMenuLoader(menus2, pathname);
+        const menuLoader = getMenuLoader$1(menus2, pathname);
         let menu = void 0;
         loaders.forEach((moduleLoader, i) => {
-          loadModule(
+          loadModule$1(
             moduleLoader,
             pendingLoads,
             (routeModule) => mods[i] = routeModule,
             cacheModules2
           );
         });
-        loadModule(
+        loadModule$1(
           menuLoader,
           pendingLoads,
           (menuModule) => menu = menuModule == null ? void 0 : menuModule.default,
@@ -978,9 +310,9 @@ var loadRoute = async (routes2, menus2, cacheModules2, pathname) => {
   }
   return null;
 };
-var loadModule = (moduleLoader, pendingLoads, moduleSetter, cacheModules2) => {
+var loadModule$1 = (moduleLoader, pendingLoads, moduleSetter, cacheModules2) => {
   if (typeof moduleLoader === "function") {
-    const loadedModule = MODULE_CACHE.get(moduleLoader);
+    const loadedModule = MODULE_CACHE$1.get(moduleLoader);
     if (loadedModule) {
       moduleSetter(loadedModule);
     } else {
@@ -989,7 +321,7 @@ var loadModule = (moduleLoader, pendingLoads, moduleSetter, cacheModules2) => {
         pendingLoads.push(
           l.then((loadedModule2) => {
             if (cacheModules2 !== false) {
-              MODULE_CACHE.set(moduleLoader, loadedModule2);
+              MODULE_CACHE$1.set(moduleLoader, loadedModule2);
             }
             moduleSetter(loadedModule2);
           })
@@ -1000,7 +332,7 @@ var loadModule = (moduleLoader, pendingLoads, moduleSetter, cacheModules2) => {
     }
   }
 };
-var getMenuLoader = (menus2, pathname) => {
+var getMenuLoader$1 = (menus2, pathname) => {
   if (menus2) {
     const menu = menus2.find(
       (m) => m[0] === pathname || pathname.startsWith(m[0] + (pathname.endsWith("/") ? "" : "/"))
@@ -1011,7 +343,7 @@ var getMenuLoader = (menus2, pathname) => {
   }
   return void 0;
 };
-var getRouteParams = (paramNames, match) => {
+var getRouteParams$1 = (paramNames, match) => {
   const params = {};
   if (paramNames) {
     for (let i = 0; i < paramNames.length; i++) {
@@ -1326,7 +658,7 @@ var noopStream = { write: () => {
 async function requestHandler(requestCtx, render2, platform, opts) {
   try {
     updateRequestCtx(requestCtx, trailingSlash);
-    const loadedRoute = await loadRoute(routes, menus, cacheModules, requestCtx.url.pathname);
+    const loadedRoute = await loadRoute$1(routes, menus, cacheModules, requestCtx.url.pathname);
     if (loadedRoute) {
       const [params, mods, _, routeBundleNames] = loadedRoute;
       const userResponse = await loadUserResponse(
@@ -1450,7 +782,378 @@ function qwikCity(render2, opts) {
     notFound
   };
 }
-const manifest = { "symbols": { "s_hA9UPaY8sNQ": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component_a_onClick", "canonicalFilename": "s_ha9upay8snq", "hash": "hA9UPaY8sNQ", "ctxKind": "event", "ctxName": "onClick$", "captures": true, "parent": "s_mYsiJcA4IBc" }, "s_skxgNVWVOT8": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component_a_onMouseOver", "canonicalFilename": "s_skxgnvwvot8", "hash": "skxgNVWVOT8", "ctxKind": "event", "ctxName": "onMouseOver$", "captures": false, "parent": "s_mYsiJcA4IBc" }, "s_dznIGAlrcag": { "origin": "routes/flower/index.tsx", "displayName": "flower_component__Fragment_input_onInput", "canonicalFilename": "s_dznigalrcag", "hash": "dznIGAlrcag", "ctxKind": "event", "ctxName": "onInput$", "captures": true, "parent": "s_OW4nu0I1yZ8" }, "s_uVE5iM9H73c": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component_a_onQVisible", "canonicalFilename": "s_uve5im9h73c", "hash": "uVE5iM9H73c", "ctxKind": "event", "ctxName": "onQVisible$", "captures": false, "parent": "s_mYsiJcA4IBc" }, "s_AaAlzKH0KlQ": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "QwikCity_component_useWatch", "canonicalFilename": "s_aaalzkh0klq", "hash": "AaAlzKH0KlQ", "ctxKind": "function", "ctxName": "useWatch$", "captures": true, "parent": "s_z1nvHyEppoI" }, "s_V0Y6u0VD1eY": { "origin": "routes/flower/index.tsx", "displayName": "flower_component_useClientEffect", "canonicalFilename": "s_v0y6u0vd1ey", "hash": "V0Y6u0VD1eY", "ctxKind": "function", "ctxName": "useClientEffect$", "captures": true, "parent": "s_OW4nu0I1yZ8" }, "s_3sccYCDd1Z0": { "origin": "root.tsx", "displayName": "root_component", "canonicalFilename": "s_3sccycdd1z0", "hash": "3sccYCDd1Z0", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_OW4nu0I1yZ8": { "origin": "routes/flower/index.tsx", "displayName": "flower_component", "canonicalFilename": "s_ow4nu0i1yz8", "hash": "OW4nu0I1yZ8", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_VkLNXphUh5s": { "origin": "routes/layout.tsx", "displayName": "layout_component", "canonicalFilename": "s_vklnxphuh5s", "hash": "VkLNXphUh5s", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_ceU05TscGYE": { "origin": "components/header/header.tsx", "displayName": "header_component", "canonicalFilename": "s_ceu05tscgye", "hash": "ceU05TscGYE", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_mYsiJcA4IBc": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component", "canonicalFilename": "s_mysijca4ibc", "hash": "mYsiJcA4IBc", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_nd8yk3KO22c": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "RouterOutlet_component", "canonicalFilename": "s_nd8yk3ko22c", "hash": "nd8yk3KO22c", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_xYL1qOwPyDI": { "origin": "routes/index.tsx", "displayName": "routes_component", "canonicalFilename": "s_xyl1qowpydi", "hash": "xYL1qOwPyDI", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_z1nvHyEppoI": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "QwikCity_component", "canonicalFilename": "s_z1nvhyeppoi", "hash": "z1nvHyEppoI", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_zrbrqoaqXSY": { "origin": "components/router-head/router-head.tsx", "displayName": "RouterHead_component", "canonicalFilename": "s_zrbrqoaqxsy", "hash": "zrbrqoaqXSY", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_N39ca0w8E8Y": { "origin": "components/header/header.tsx", "displayName": "header_component_useStylesScoped", "canonicalFilename": "s_n39ca0w8e8y", "hash": "N39ca0w8E8Y", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_ceU05TscGYE" }, "s_p4UiTwsJc7c": { "origin": "routes/flower/index.tsx", "displayName": "flower_component_useStylesScoped", "canonicalFilename": "s_p4uitwsjc7c", "hash": "p4UiTwsJc7c", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_OW4nu0I1yZ8" } }, "mapping": { "s_hA9UPaY8sNQ": "q-def503e9.js", "s_skxgNVWVOT8": "q-def503e9.js", "s_dznIGAlrcag": "q-e929a10e.js", "s_uVE5iM9H73c": "q-def503e9.js", "s_AaAlzKH0KlQ": "q-35bf46d4.js", "s_V0Y6u0VD1eY": "q-e929a10e.js", "s_3sccYCDd1Z0": "q-27aa1930.js", "s_OW4nu0I1yZ8": "q-e929a10e.js", "s_VkLNXphUh5s": "q-b86ece1a.js", "s_ceU05TscGYE": "q-9a2fd075.js", "s_mYsiJcA4IBc": "q-def503e9.js", "s_nd8yk3KO22c": "q-66c4d9a6.js", "s_xYL1qOwPyDI": "q-0847c181.js", "s_z1nvHyEppoI": "q-35bf46d4.js", "s_zrbrqoaqXSY": "q-cdb8ccea.js", "s_N39ca0w8E8Y": "q-9a2fd075.js", "s_p4UiTwsJc7c": "q-e929a10e.js" }, "bundles": { "q-0847c181.js": { "size": 2698, "imports": ["q-27aa1930.js", "q-a5f4787b.js"], "origins": ["src/entry_routes.js", "src/s_xyl1qowpydi.js"], "symbols": ["s_xYL1qOwPyDI"] }, "q-12e642bf.js": { "size": 158, "imports": ["q-a5f4787b.js"], "dynamicImports": ["q-b86ece1a.js"], "origins": ["src/routes/layout.js"] }, "q-13745fbc.js": { "size": 58, "imports": ["q-a5f4787b.js"] }, "q-143c7194.js": { "size": 2180, "origins": ["node_modules/@builder.io/qwik-city/service-worker.mjs", "src/routes/service-worker.js"] }, "q-27aa1930.js": { "size": 4429, "imports": ["q-a5f4787b.js"], "dynamicImports": ["q-2ba8a3db.js", "q-35bf46d4.js", "q-66c4d9a6.js", "q-cdb8ccea.js", "q-def503e9.js"], "origins": ["node_modules/@builder.io/qwik-city/index.qwik.mjs", "src/components/router-head/router-head.js", "src/entry_root.js", "src/s_3sccycdd1z0.js"], "symbols": ["s_3sccYCDd1Z0"] }, "q-2ba8a3db.js": { "size": 424, "imports": ["q-a5f4787b.js"], "dynamicImports": ["q-12e642bf.js", "q-5c3dcd0e.js", "q-9f98f7a3.js", "q-caae95b2.js"], "origins": ["@qwik-city-plan"] }, "q-35bf46d4.js": { "size": 1489, "imports": ["q-27aa1930.js", "q-a5f4787b.js"], "dynamicImports": ["q-2ba8a3db.js"], "origins": ["@builder.io/qwik/build", "src/entry_QwikCity.js", "src/s_aaalzkh0klq.js", "src/s_z1nvhyeppoi.js"], "symbols": ["s_AaAlzKH0KlQ", "s_z1nvHyEppoI"] }, "q-5c3dcd0e.js": { "size": 196, "imports": ["q-a5f4787b.js"], "dynamicImports": ["q-0847c181.js"], "origins": ["src/routes/index.js"] }, "q-66c4d9a6.js": { "size": 269, "imports": ["q-27aa1930.js", "q-a5f4787b.js"], "origins": ["src/entry_RouterOutlet.js", "src/s_nd8yk3ko22c.js"], "symbols": ["s_nd8yk3KO22c"] }, "q-9a2fd075.js": { "size": 4135, "imports": ["q-a5f4787b.js"], "origins": ["src/components/header/header.css?used&inline", "src/components/icons/qwik.js", "src/entry_header.js", "src/s_ceu05tscgye.js", "src/s_n39ca0w8e8y.js"], "symbols": ["s_ceU05TscGYE", "s_N39ca0w8E8Y"] }, "q-9f98f7a3.js": { "size": 128, "imports": ["q-a5f4787b.js"], "dynamicImports": ["q-143c7194.js"], "origins": ["@qwik-city-entries"] }, "q-a5f4787b.js": { "size": 36362, "dynamicImports": ["q-27aa1930.js"], "origins": ["\0vite/preload-helper", "node_modules/@builder.io/qwik/core.min.mjs", "src/global.css", "src/root.js"] }, "q-b86ece1a.js": { "size": 393, "imports": ["q-a5f4787b.js"], "dynamicImports": ["q-9a2fd075.js"], "origins": ["src/components/header/header.js", "src/entry_layout.js", "src/s_vklnxphuh5s.js"], "symbols": ["s_VkLNXphUh5s"] }, "q-caae95b2.js": { "size": 192, "imports": ["q-a5f4787b.js"], "dynamicImports": ["q-e929a10e.js"], "origins": ["src/routes/flower/index.js"] }, "q-cdb8ccea.js": { "size": 909, "imports": ["q-27aa1930.js", "q-a5f4787b.js"], "origins": ["src/entry_RouterHead.js", "src/s_zrbrqoaqxsy.js"], "symbols": ["s_zrbrqoaqXSY"] }, "q-def503e9.js": { "size": 886, "imports": ["q-27aa1930.js", "q-a5f4787b.js"], "origins": ["src/entry_Link.js", "src/s_ha9upay8snq.js", "src/s_mysijca4ibc.js", "src/s_skxgnvwvot8.js", "src/s_uve5im9h73c.js"], "symbols": ["s_hA9UPaY8sNQ", "s_mYsiJcA4IBc", "s_skxgNVWVOT8", "s_uVE5iM9H73c"] }, "q-e929a10e.js": { "size": 2457, "imports": ["q-27aa1930.js", "q-a5f4787b.js"], "origins": ["src/entry_flower.js", "src/routes/flower/flower.css?used&inline", "src/s_dznigalrcag.js", "src/s_ow4nu0i1yz8.js", "src/s_p4uitwsjc7c.js", "src/s_v0y6u0vd1ey.js"], "symbols": ["s_dznIGAlrcag", "s_OW4nu0I1yZ8", "s_p4UiTwsJc7c", "s_V0Y6u0VD1eY"] } }, "injections": [{ "tag": "link", "location": "head", "attributes": { "rel": "stylesheet", "href": "/build/q-0ea8883c.css" } }], "version": "1", "options": { "target": "client", "buildMode": "production", "forceFullBuild": true, "entryStrategy": { "type": "smart" } }, "platform": { "qwik": "0.9.0", "vite": "", "rollup": "2.78.1", "env": "node", "os": "linux", "node": "16.15.0" } };
+const manifest = { "symbols": { "s_hA9UPaY8sNQ": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component_a_onClick", "canonicalFilename": "s_ha9upay8snq", "hash": "hA9UPaY8sNQ", "ctxKind": "event", "ctxName": "onClick$", "captures": true, "parent": "s_mYsiJcA4IBc" }, "s_skxgNVWVOT8": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component_a_onMouseOver", "canonicalFilename": "s_skxgnvwvot8", "hash": "skxgNVWVOT8", "ctxKind": "event", "ctxName": "onMouseOver$", "captures": false, "parent": "s_mYsiJcA4IBc" }, "s_uVE5iM9H73c": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component_a_onQVisible", "canonicalFilename": "s_uve5im9h73c", "hash": "uVE5iM9H73c", "ctxKind": "event", "ctxName": "onQVisible$", "captures": false, "parent": "s_mYsiJcA4IBc" }, "s_AaAlzKH0KlQ": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "QwikCity_component_useWatch", "canonicalFilename": "s_aaalzkh0klq", "hash": "AaAlzKH0KlQ", "ctxKind": "function", "ctxName": "useWatch$", "captures": true, "parent": "s_z1nvHyEppoI" }, "s_3sccYCDd1Z0": { "origin": "root.tsx", "displayName": "root_component", "canonicalFilename": "s_3sccycdd1z0", "hash": "3sccYCDd1Z0", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_VkLNXphUh5s": { "origin": "routes/layout.tsx", "displayName": "layout_component", "canonicalFilename": "s_vklnxphuh5s", "hash": "VkLNXphUh5s", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_ceU05TscGYE": { "origin": "components/header/header.tsx", "displayName": "header_component", "canonicalFilename": "s_ceu05tscgye", "hash": "ceU05TscGYE", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_flbgQB75nqU": { "origin": "routes/quemsomos/index.tsx", "displayName": "quemsomos_component", "canonicalFilename": "s_flbgqb75nqu", "hash": "flbgQB75nqU", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_hGK5aNZYjtw": { "origin": "routes/portifolio/index.tsx", "displayName": "portifolio_component", "canonicalFilename": "s_hgk5anzyjtw", "hash": "hGK5aNZYjtw", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_mYsiJcA4IBc": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component", "canonicalFilename": "s_mysijca4ibc", "hash": "mYsiJcA4IBc", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_nd8yk3KO22c": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "RouterOutlet_component", "canonicalFilename": "s_nd8yk3ko22c", "hash": "nd8yk3KO22c", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_xYL1qOwPyDI": { "origin": "routes/index.tsx", "displayName": "routes_component", "canonicalFilename": "s_xyl1qowpydi", "hash": "xYL1qOwPyDI", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_z1nvHyEppoI": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "QwikCity_component", "canonicalFilename": "s_z1nvhyeppoi", "hash": "z1nvHyEppoI", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_zrbrqoaqXSY": { "origin": "components/router-head/router-head.tsx", "displayName": "RouterHead_component", "canonicalFilename": "s_zrbrqoaqxsy", "hash": "zrbrqoaqXSY", "ctxKind": "function", "ctxName": "component$", "captures": false }, "s_N39ca0w8E8Y": { "origin": "components/header/header.tsx", "displayName": "header_component_useStylesScoped", "canonicalFilename": "s_n39ca0w8e8y", "hash": "N39ca0w8E8Y", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_ceU05TscGYE" } }, "mapping": { "s_hA9UPaY8sNQ": "q-50689fd0.js", "s_skxgNVWVOT8": "q-50689fd0.js", "s_uVE5iM9H73c": "q-50689fd0.js", "s_AaAlzKH0KlQ": "q-62b890ef.js", "s_3sccYCDd1Z0": "q-5592b44e.js", "s_VkLNXphUh5s": "q-afba74b1.js", "s_ceU05TscGYE": "q-e80fd353.js", "s_flbgQB75nqU": "q-3995a2c6.js", "s_hGK5aNZYjtw": "q-175f6b43.js", "s_mYsiJcA4IBc": "q-50689fd0.js", "s_nd8yk3KO22c": "q-2b100383.js", "s_xYL1qOwPyDI": "q-944da4e1.js", "s_z1nvHyEppoI": "q-62b890ef.js", "s_zrbrqoaqXSY": "q-9e7b7810.js", "s_N39ca0w8E8Y": "q-e80fd353.js" }, "bundles": { "q-143c7194.js": { "size": 2180, "origins": ["node_modules/@builder.io/qwik-city/service-worker.mjs", "src/routes/service-worker.js"] }, "q-175f6b43.js": { "size": 93, "imports": ["q-1a8073c9.js"], "origins": ["src/entry_portifolio.js", "src/s_hgk5anzyjtw.js"], "symbols": ["s_hGK5aNZYjtw"] }, "q-1a8073c9.js": { "size": 35907, "dynamicImports": ["q-5592b44e.js"], "origins": ["\0vite/preload-helper", "node_modules/@builder.io/qwik/core.min.mjs", "src/global.css", "src/root.js"] }, "q-2b100383.js": { "size": 269, "imports": ["q-1a8073c9.js", "q-5592b44e.js"], "origins": ["src/entry_RouterOutlet.js", "src/s_nd8yk3ko22c.js"], "symbols": ["s_nd8yk3KO22c"] }, "q-2d41746e.js": { "size": 158, "imports": ["q-1a8073c9.js"], "dynamicImports": ["q-3995a2c6.js"], "origins": ["src/routes/quemsomos/index.js"] }, "q-3995a2c6.js": { "size": 93, "imports": ["q-1a8073c9.js"], "origins": ["src/entry_quemsomos.js", "src/s_flbgqb75nqu.js"], "symbols": ["s_flbgQB75nqU"] }, "q-50689fd0.js": { "size": 886, "imports": ["q-1a8073c9.js", "q-5592b44e.js"], "origins": ["src/entry_Link.js", "src/s_ha9upay8snq.js", "src/s_mysijca4ibc.js", "src/s_skxgnvwvot8.js", "src/s_uve5im9h73c.js"], "symbols": ["s_hA9UPaY8sNQ", "s_mYsiJcA4IBc", "s_skxgNVWVOT8", "s_uVE5iM9H73c"] }, "q-54fd9567.js": { "size": 58, "imports": ["q-1a8073c9.js"] }, "q-5592b44e.js": { "size": 4424, "imports": ["q-1a8073c9.js"], "dynamicImports": ["q-2b100383.js", "q-50689fd0.js", "q-55b469f3.js", "q-62b890ef.js", "q-9e7b7810.js"], "origins": ["node_modules/@builder.io/qwik-city/index.qwik.mjs", "src/components/router-head/router-head.js", "src/entry_root.js", "src/s_3sccycdd1z0.js"], "symbols": ["s_3sccYCDd1Z0"] }, "q-55b469f3.js": { "size": 509, "imports": ["q-1a8073c9.js"], "dynamicImports": ["q-2d41746e.js", "q-be13f3f5.js", "q-d1379dc0.js", "q-d312b128.js", "q-e17920fb.js"], "origins": ["@qwik-city-plan"] }, "q-62b890ef.js": { "size": 1489, "imports": ["q-1a8073c9.js", "q-5592b44e.js"], "dynamicImports": ["q-55b469f3.js"], "origins": ["@builder.io/qwik/build", "src/entry_QwikCity.js", "src/s_aaalzkh0klq.js", "src/s_z1nvhyeppoi.js"], "symbols": ["s_AaAlzKH0KlQ", "s_z1nvHyEppoI"] }, "q-944da4e1.js": { "size": 132, "imports": ["q-1a8073c9.js"], "origins": ["src/entry_routes.js", "src/s_xyl1qowpydi.js"], "symbols": ["s_xYL1qOwPyDI"] }, "q-9e7b7810.js": { "size": 909, "imports": ["q-1a8073c9.js", "q-5592b44e.js"], "origins": ["src/entry_RouterHead.js", "src/s_zrbrqoaqxsy.js"], "symbols": ["s_zrbrqoaqXSY"] }, "q-afba74b1.js": { "size": 386, "imports": ["q-1a8073c9.js"], "dynamicImports": ["q-e80fd353.js"], "origins": ["src/components/header/header.js", "src/entry_layout.js", "src/s_vklnxphuh5s.js"], "symbols": ["s_VkLNXphUh5s"] }, "q-be13f3f5.js": { "size": 128, "imports": ["q-1a8073c9.js"], "dynamicImports": ["q-143c7194.js"], "origins": ["@qwik-city-entries"] }, "q-d1379dc0.js": { "size": 196, "imports": ["q-1a8073c9.js"], "dynamicImports": ["q-944da4e1.js"], "origins": ["src/routes/index.js"] }, "q-d312b128.js": { "size": 158, "imports": ["q-1a8073c9.js"], "dynamicImports": ["q-afba74b1.js"], "origins": ["src/routes/layout.js"] }, "q-e17920fb.js": { "size": 158, "imports": ["q-1a8073c9.js"], "dynamicImports": ["q-175f6b43.js"], "origins": ["src/routes/portifolio/index.js"] }, "q-e80fd353.js": { "size": 674, "imports": ["q-1a8073c9.js"], "origins": ["src/components/header/header.css?used&inline", "src/entry_header.js", "src/s_ceu05tscgye.js", "src/s_n39ca0w8e8y.js"], "symbols": ["s_ceU05TscGYE", "s_N39ca0w8E8Y"] } }, "injections": [{ "tag": "link", "location": "head", "attributes": { "rel": "stylesheet", "href": "/build/q-0ea8883c.css" } }], "version": "1", "options": { "target": "client", "buildMode": "production", "forceFullBuild": true, "entryStrategy": { "type": "smart" } }, "platform": { "qwik": "0.9.0", "vite": "", "rollup": "2.78.1", "env": "node", "os": "linux", "node": "16.15.0" } };
+const isServer = true;
+const isBrowser = false;
+const ContentContext = /* @__PURE__ */ createContext("qc-c");
+const ContentInternalContext = /* @__PURE__ */ createContext("qc-ic");
+const DocumentHeadContext = /* @__PURE__ */ createContext("qc-h");
+const RouteLocationContext = /* @__PURE__ */ createContext("qc-l");
+const RouteNavigateContext = /* @__PURE__ */ createContext("qc-n");
+const RouterOutlet = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
+  const { contents } = useContext(ContentInternalContext);
+  if (contents && contents.length > 0) {
+    const contentsLen = contents.length;
+    let cmp = null;
+    for (let i = contentsLen - 1; i >= 0; i--)
+      cmp = jsx$1(contents[i].default, {
+        children: cmp
+      });
+    return cmp;
+  }
+  return SkipRender;
+}, "RouterOutlet_component_nd8yk3KO22c"));
+const MODULE_CACHE = /* @__PURE__ */ new WeakMap();
+const loadRoute = async (routes2, menus2, cacheModules2, pathname) => {
+  if (Array.isArray(routes2))
+    for (const route of routes2) {
+      const match = route[0].exec(pathname);
+      if (match) {
+        const loaders = route[1];
+        const params = getRouteParams(route[2], match);
+        const routeBundleNames = route[4];
+        const mods = new Array(loaders.length);
+        const pendingLoads = [];
+        const menuLoader = getMenuLoader(menus2, pathname);
+        let menu = void 0;
+        loaders.forEach((moduleLoader, i) => {
+          loadModule(moduleLoader, pendingLoads, (routeModule) => mods[i] = routeModule, cacheModules2);
+        });
+        loadModule(menuLoader, pendingLoads, (menuModule) => menu = menuModule == null ? void 0 : menuModule.default, cacheModules2);
+        if (pendingLoads.length > 0)
+          await Promise.all(pendingLoads);
+        return [
+          params,
+          mods,
+          menu,
+          routeBundleNames
+        ];
+      }
+    }
+  return null;
+};
+const loadModule = (moduleLoader, pendingLoads, moduleSetter, cacheModules2) => {
+  if (typeof moduleLoader === "function") {
+    const loadedModule = MODULE_CACHE.get(moduleLoader);
+    if (loadedModule)
+      moduleSetter(loadedModule);
+    else {
+      const l = moduleLoader();
+      if (typeof l.then === "function")
+        pendingLoads.push(l.then((loadedModule2) => {
+          if (cacheModules2 !== false)
+            MODULE_CACHE.set(moduleLoader, loadedModule2);
+          moduleSetter(loadedModule2);
+        }));
+      else if (l)
+        moduleSetter(l);
+    }
+  }
+};
+const getMenuLoader = (menus2, pathname) => {
+  if (menus2) {
+    const menu = menus2.find((m) => m[0] === pathname || pathname.startsWith(m[0] + (pathname.endsWith("/") ? "" : "/")));
+    if (menu)
+      return menu[1];
+  }
+  return void 0;
+};
+const getRouteParams = (paramNames, match) => {
+  const params = {};
+  if (paramNames)
+    for (let i = 0; i < paramNames.length; i++)
+      params[paramNames[i]] = match ? match[i + 1] : "";
+  return params;
+};
+const resolveHead = (endpoint, routeLocation, contentModules) => {
+  const head2 = createDocumentHead();
+  const headProps = {
+    data: endpoint ? endpoint.body : null,
+    head: head2,
+    ...routeLocation
+  };
+  for (let i = contentModules.length - 1; i >= 0; i--) {
+    const contentModuleHead = contentModules[i] && contentModules[i].head;
+    if (contentModuleHead) {
+      if (typeof contentModuleHead === "function")
+        resolveDocumentHead(head2, contentModuleHead(headProps));
+      else if (typeof contentModuleHead === "object")
+        resolveDocumentHead(head2, contentModuleHead);
+    }
+  }
+  return headProps.head;
+};
+const resolveDocumentHead = (resolvedHead, updatedHead) => {
+  if (typeof updatedHead.title === "string")
+    resolvedHead.title = updatedHead.title;
+  mergeArray(resolvedHead.meta, updatedHead.meta);
+  mergeArray(resolvedHead.links, updatedHead.links);
+  mergeArray(resolvedHead.styles, updatedHead.styles);
+};
+const mergeArray = (existingArr, newArr) => {
+  if (Array.isArray(newArr))
+    for (const newItem of newArr) {
+      if (typeof newItem.key === "string") {
+        const existingIndex = existingArr.findIndex((i) => i.key === newItem.key);
+        if (existingIndex > -1) {
+          existingArr[existingIndex] = newItem;
+          continue;
+        }
+      }
+      existingArr.push(newItem);
+    }
+};
+const createDocumentHead = () => ({
+  title: "",
+  meta: [],
+  links: [],
+  styles: []
+});
+const useDocumentHead = () => useContext(DocumentHeadContext);
+const useLocation = () => useContext(RouteLocationContext);
+const useNavigate = () => useContext(RouteNavigateContext);
+const useQwikCityEnv = () => noSerialize(useEnvData("qwikcity"));
+const toPath = (url) => url.pathname + url.search + url.hash;
+const toUrl = (url, baseUrl) => new URL(url, baseUrl.href);
+const isSameOrigin = (a, b) => a.origin === b.origin;
+const isSamePath = (a, b) => a.pathname + a.search === b.pathname + b.search;
+const isSamePathname = (a, b) => a.pathname === b.pathname;
+const isSameOriginDifferentPathname = (a, b) => isSameOrigin(a, b) && !isSamePath(a, b);
+const getClientEndpointPath = (pathname) => pathname + (pathname.endsWith("/") ? "" : "/") + "q-data.json";
+const getClientNavPath = (props, baseUrl) => {
+  const href = props.href;
+  if (typeof href === "string" && href.trim() !== "" && typeof props.target !== "string")
+    try {
+      const linkUrl = toUrl(href, baseUrl);
+      const currentUrl = toUrl("", baseUrl);
+      if (isSameOrigin(linkUrl, currentUrl))
+        return toPath(linkUrl);
+    } catch (e) {
+      console.error(e);
+    }
+  return null;
+};
+const getPrefetchUrl = (props, clientNavPath, currentLoc) => {
+  if (props.prefetch && clientNavPath) {
+    const prefetchUrl = toUrl(clientNavPath, currentLoc);
+    if (!isSamePathname(prefetchUrl, toUrl("", currentLoc)))
+      return prefetchUrl + "";
+  }
+  return null;
+};
+const clientNavigate = (win, routeNavigate) => {
+  const currentUrl = win.location;
+  const newUrl = toUrl(routeNavigate.path, currentUrl);
+  if (isSameOriginDifferentPathname(currentUrl, newUrl)) {
+    handleScroll(win, currentUrl, newUrl);
+    win.history.pushState("", "", toPath(newUrl));
+  }
+  if (!win[CLIENT_HISTORY_INITIALIZED]) {
+    win[CLIENT_HISTORY_INITIALIZED] = 1;
+    win.addEventListener("popstate", () => {
+      const currentUrl2 = win.location;
+      const previousUrl = toUrl(routeNavigate.path, currentUrl2);
+      if (isSameOriginDifferentPathname(currentUrl2, previousUrl)) {
+        handleScroll(win, previousUrl, currentUrl2);
+        routeNavigate.path = toPath(currentUrl2);
+      }
+    });
+  }
+};
+const handleScroll = async (win, previousUrl, newUrl) => {
+  const doc = win.document;
+  const newHash = newUrl.hash;
+  if (isSamePath(previousUrl, newUrl)) {
+    if (previousUrl.hash !== newHash) {
+      await domWait();
+      if (newHash)
+        scrollToHashId(doc, newHash);
+      else
+        win.scrollTo(0, 0);
+    }
+  } else {
+    if (newHash)
+      for (let i = 0; i < 24; i++) {
+        await domWait();
+        if (scrollToHashId(doc, newHash))
+          break;
+      }
+    else {
+      await domWait();
+      win.scrollTo(0, 0);
+    }
+  }
+};
+const domWait = () => new Promise((resolve) => setTimeout(resolve, 12));
+const scrollToHashId = (doc, hash) => {
+  const elmId = hash.slice(1);
+  const elm = doc.getElementById(elmId);
+  if (elm)
+    elm.scrollIntoView();
+  return elm;
+};
+const dispatchPrefetchEvent = (prefetchData) => dispatchEvent(new CustomEvent("qprefetch", {
+  detail: prefetchData
+}));
+const CLIENT_HISTORY_INITIALIZED = /* @__PURE__ */ Symbol();
+const loadClientData = async (href) => {
+  const { cacheModules: cacheModules2 } = await Promise.resolve().then(() => _qwikCityPlan);
+  const pagePathname = new URL(href).pathname;
+  const endpointUrl = getClientEndpointPath(pagePathname);
+  const now = Date.now();
+  const expiration = cacheModules2 ? 6e5 : 15e3;
+  const cachedClientPageIndex = cachedClientPages.findIndex((c) => c.u === endpointUrl);
+  let cachedClientPageData = cachedClientPages[cachedClientPageIndex];
+  dispatchPrefetchEvent({
+    links: [
+      pagePathname
+    ]
+  });
+  if (!cachedClientPageData || cachedClientPageData.t + expiration < now) {
+    cachedClientPageData = {
+      u: endpointUrl,
+      t: now,
+      c: new Promise((resolve) => {
+        fetch(endpointUrl).then((clientResponse) => {
+          const contentType = clientResponse.headers.get("content-type") || "";
+          if (clientResponse.ok && contentType.includes("json"))
+            clientResponse.json().then((clientData) => {
+              dispatchPrefetchEvent({
+                bundles: clientData.prefetch,
+                links: [
+                  pagePathname
+                ]
+              });
+              resolve(clientData);
+            }, () => resolve(null));
+          else
+            resolve(null);
+        }, () => resolve(null));
+      })
+    };
+    for (let i = cachedClientPages.length - 1; i >= 0; i--)
+      if (cachedClientPages[i].t + expiration < now)
+        cachedClientPages.splice(i, 1);
+    cachedClientPages.push(cachedClientPageData);
+  }
+  cachedClientPageData.c.catch((e) => console.error(e));
+  return cachedClientPageData.c;
+};
+const cachedClientPages = [];
+const QwikCity = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
+  const env = useQwikCityEnv();
+  if (!(env == null ? void 0 : env.params))
+    throw new Error(`Missing Qwik City Env Data`);
+  const urlEnv = useEnvData("url");
+  if (!urlEnv)
+    throw new Error(`Missing Qwik URL Env Data`);
+  const url = new URL(urlEnv);
+  const routeLocation = useStore({
+    href: url.href,
+    pathname: url.pathname,
+    query: Object.fromEntries(url.searchParams.entries()),
+    params: env.params
+  });
+  const routeNavigate = useStore({
+    path: toPath(url)
+  });
+  const documentHead = useStore(createDocumentHead);
+  const content = useStore({
+    headings: void 0,
+    menu: void 0
+  });
+  const contentInternal = useStore({
+    contents: void 0
+  });
+  useContextProvider(ContentContext, content);
+  useContextProvider(ContentInternalContext, contentInternal);
+  useContextProvider(DocumentHeadContext, documentHead);
+  useContextProvider(RouteLocationContext, routeLocation);
+  useContextProvider(RouteNavigateContext, routeNavigate);
+  useWatchQrl(inlinedQrl(async ({ track }) => {
+    const [content2, contentInternal2, documentHead2, env2, routeLocation2, routeNavigate2] = useLexicalScope();
+    const { routes: routes2, menus: menus2, cacheModules: cacheModules2 } = await Promise.resolve().then(() => _qwikCityPlan);
+    const path = track(routeNavigate2, "path");
+    const url2 = new URL(path, routeLocation2.href);
+    const pathname = url2.pathname;
+    const loadRoutePromise = loadRoute(routes2, menus2, cacheModules2, pathname);
+    const endpointResponse = isServer ? env2.response : loadClientData(url2.href);
+    const loadedRoute = await loadRoutePromise;
+    if (loadedRoute) {
+      const [params, mods, menu] = loadedRoute;
+      const contentModules = mods;
+      const pageModule = contentModules[contentModules.length - 1];
+      routeLocation2.href = url2.href;
+      routeLocation2.pathname = pathname;
+      routeLocation2.params = {
+        ...params
+      };
+      routeLocation2.query = Object.fromEntries(url2.searchParams.entries());
+      content2.headings = pageModule.headings;
+      content2.menu = menu;
+      contentInternal2.contents = noSerialize(contentModules);
+      const clientPageData = await endpointResponse;
+      const resolvedHead = resolveHead(clientPageData, routeLocation2, contentModules);
+      documentHead2.links = resolvedHead.links;
+      documentHead2.meta = resolvedHead.meta;
+      documentHead2.styles = resolvedHead.styles;
+      documentHead2.title = resolvedHead.title;
+      if (isBrowser)
+        clientNavigate(window, routeNavigate2);
+    }
+  }, "QwikCity_component_useWatch_AaAlzKH0KlQ", [
+    content,
+    contentInternal,
+    documentHead,
+    env,
+    routeLocation,
+    routeNavigate
+  ]));
+  return /* @__PURE__ */ jsx(Slot, {});
+}, "QwikCity_component_z1nvHyEppoI"));
+/* @__PURE__ */ componentQrl(inlinedQrl((props) => {
+  const nav = useNavigate();
+  const loc = useLocation();
+  const originalHref = props.href;
+  const linkProps = {
+    ...props
+  };
+  const clientNavPath = getClientNavPath(linkProps, loc);
+  const prefetchUrl = getPrefetchUrl(props, clientNavPath, loc);
+  linkProps["preventdefault:click"] = !!clientNavPath;
+  linkProps.href = clientNavPath || originalHref;
+  return /* @__PURE__ */ jsx("a", {
+    ...linkProps,
+    onClick$: inlinedQrl(() => {
+      const [clientNavPath2, linkProps2, nav2] = useLexicalScope();
+      if (clientNavPath2)
+        nav2.path = linkProps2.href;
+    }, "Link_component_a_onClick_hA9UPaY8sNQ", [
+      clientNavPath,
+      linkProps,
+      nav
+    ]),
+    "data-prefetch": prefetchUrl,
+    onMouseOver$: inlinedQrl((_, elm) => prefetchLinkResources(elm), "Link_component_a_onMouseOver_skxgNVWVOT8"),
+    onQVisible$: inlinedQrl((_, elm) => prefetchLinkResources(elm, true), "Link_component_a_onQVisible_uVE5iM9H73c"),
+    children: /* @__PURE__ */ jsx(Slot, {})
+  });
+}, "Link_component_mYsiJcA4IBc"));
+const prefetchLinkResources = (elm, isOnVisible) => {
+  var _a2;
+  const prefetchUrl = (_a2 = elm == null ? void 0 : elm.dataset) == null ? void 0 : _a2.prefetch;
+  if (prefetchUrl) {
+    if (!windowInnerWidth)
+      windowInnerWidth = window.innerWidth;
+    if (!isOnVisible || isOnVisible && windowInnerWidth < 520)
+      loadClientData(prefetchUrl);
+  }
+};
+let windowInnerWidth = 0;
+const swRegister = '((s,a,r,i)=>{r=(e,t)=>{t=document.querySelector("[q\\\\:base]"),t&&a.active&&a.active.postMessage({type:"qprefetch",base:t.getAttribute("q:base"),...e})},addEventListener("qprefetch",e=>{const t=e.detail;a?r(t):t.bundles&&s.push(...t.bundles)}),navigator.serviceWorker.register("/service-worker.js").then(e=>{i=()=>{a=e,r({bundles:s})},e.installing?e.installing.addEventListener("statechange",t=>{t.target.state=="activated"&&i()}):e.active&&i()}).catch(e=>console.error(e))})([])';
+const ServiceWorkerRegister = () => jsx$1("script", {
+  dangerouslySetInnerHTML: swRegister
+});
 const RouterHead = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
   const head2 = useDocumentHead();
   const loc = useLocation();
@@ -1523,7 +1226,7 @@ const Root = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
         ]
       }),
       /* @__PURE__ */ jsxs("body", {
-        lang: "en",
+        lang: "pt-br",
         children: [
           /* @__PURE__ */ jsx(RouterOutlet, {}),
           /* @__PURE__ */ jsx(ServiceWorkerRegister, {})

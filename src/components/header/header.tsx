@@ -11,8 +11,7 @@ export default component$(() => {
         <li>Landing</li>
         <li>Quem somos</li>
         <li>Portifólio</li>
-        <div id="acesso"><button id="acessar">Acessar</button><span id="itens"><icon id="carrinho"></icon>
-        <span id="n-items">(0)</span></span></div>
+        <span id="n-items">(0)</span>
       </ul>
      </nav> 
     </header>

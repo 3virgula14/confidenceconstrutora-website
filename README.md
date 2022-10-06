@@ -12,3 +12,9 @@ Website da Construtura Confidence de Vitória da Conquista
  - Brain storming de soluções de layout
  - Content Manager Solutions
  - Desenvolvimento de telas
+
+## Static Site Generator (Node.js)
+
+```
+npm run ssg
+```
