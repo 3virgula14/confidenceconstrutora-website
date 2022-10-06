@@ -1,6 +1,5 @@
 import { component$ } from '@builder.io/qwik';
 import { QwikCity, RouterOutlet, ServiceWorkerRegister } from '@builder.io/qwik-city';
-import { RouterHead } from './components/router-head/router-head';
 
 import './global.css';
 
@@ -15,7 +14,8 @@ export default component$(() => {
     <QwikCity>
       <head>
         <meta charSet="utf-8" />
-        <RouterHead />
+        <title>Confidence Construtora</title>
+        <link rel="icon" type="image/png" href="/favicon.png" />
       </head>
       <body lang="pt-br">
         <RouterOutlet />
