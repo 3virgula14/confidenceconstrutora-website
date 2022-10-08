@@ -1,5 +1,5 @@
 prose:
-  rooturl: 'public/content'
+  rooturl: 'public/content/'
   siteurl: 'http://www.construtoraconfidence.com'
   media: 'media'
   ignore:
