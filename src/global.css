@@ -5,7 +5,7 @@
  * the styles in here will be applied to the Document, without any sort of CSS scoping.
  *
  */
-
+/* 
 :root {
   --qwik-dark-blue: #006ce9;
   --qwik-light-blue: #18b6f6;
@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #e2ddda;
   font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   padding: 20px 20px 40px 20px;
 }
@@ -115,11 +115,11 @@ a.mindblow {
   border-bottom: 4px solid black;
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🤯</text></svg>")
       16 0,
-    auto; /*!emojicursor.app*/
+    auto; 
 }
 
 a.mindblow:hover {
   border-bottom-width: 0px;
   margin-bottom: 4px;
   transform: translateY(4px);
-}
+} */

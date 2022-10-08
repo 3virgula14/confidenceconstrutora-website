@@ -1,0 +1,18 @@
+body {
+    background-color: #e2ddda;
+    font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 20px 20px 40px 20px;
+}
+
+#temp_page{
+    width: fit-content;
+    text-align:center; 
+    display:flex; 
+    flex-direction: column;
+    margin: 0 auto;
+    color: #d27d7f;
+}
+
+#temp_page img{
+    width: 200px;
+}
