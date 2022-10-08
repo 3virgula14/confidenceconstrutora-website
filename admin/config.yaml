@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: master #
+publish_mode: editorial_workflow
+media_folder: "public/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "portfolio_items" # Used in routes, e.g., /admin/collections/portfolio_items
+    label: "Portifólio" # Used in the UI
+    folder: "_posts/portfolio_items" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      #- {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Título", name: "titulo", widget: "string"}
+      - {label: "Data de publicação", name: "date", widget: "datetime"}
+      - {label: "Imagem principal", name: "thumbnail", widget: "image"}
+      - {label: "Descrição de negócio", name: "d_negocio", widget: "markdown"}
+      - {label: "Descrição técnica", name: "d_tec", widget: "markdown"}
+      - {label: "Descrição de execução", name: "d_exec", widget: "markdown"}
