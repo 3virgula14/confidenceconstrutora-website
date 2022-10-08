@@ -21,17 +21,7 @@ export default component$(() => {
       <body lang="pt-br">
         <RouterOutlet />
         <ServiceWorkerRegister />
-        <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-              if (!user) {
-                window.netlifyIdentity.on("login", () => {
-                  document.location.href = "/admin/";
-                });
-              }
-            });
-          }
-        </script>
+        
       </body>
     </QwikCity>
   );
