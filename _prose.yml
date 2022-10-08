@@ -1,12 +1,9 @@
 prose:
-  rooturl: 'public/content'
+  rooturl: 'public/'
   siteurl: 'http://www.construtoraconfidence.com'
   media: 'media'
   ignore:
-    - index.md
     - _prose.yml
-    - /src
-    - /_includes
   metadata:
     content:
       - name: "layout"
