@@ -9,7 +9,7 @@ show_preview_links: false
 collections:
   - name: "portfolio_items" # Used in routes, e.g., /admin/collections/portfolio_items
     label: "Portifólio" # Used in the UI
-    folder: "_posts/portfolio_items" # The path to the folder where the documents are stored
+    folder: "public/_posts/portfolio_items" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
