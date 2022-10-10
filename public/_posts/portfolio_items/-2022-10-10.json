@@ -1,5 +1,10 @@
 {
   "titulo": "/,.",
   "d_short": "eaoe",
-  "d_full": "aoeaoe"
+  "d_full": "aoeaoe",
+  "photos": [
+    {
+      "image": "/public/uploads/faye-cornish-uq3gtiplqro-unsplash.jpg"
+    }
+  ]
 }
