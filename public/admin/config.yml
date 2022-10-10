@@ -11,8 +11,6 @@ logo_url: https://www.construtoraconfidence.com/favicon.png
 
 collections:
   - name: "portfolio_items" # Used in routes, e.g., /admin/collections/portfolio_items
-    media_folder: '/{{media_folder}}'
-    public_folder: '/{{public_folder}}'
     label: "Portifólio" # Used in the UI
     format: json
     folder: "public/_posts/portfolio_items" # The path to the folder where the documents are stored
