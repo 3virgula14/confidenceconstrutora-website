@@ -3,7 +3,7 @@ backend:
   branch: master #
 
 publish_mode: editorial_workflow
-media_folder: "public/uploads"
+media_folder: "uploads"
 show_preview_links: false
 logo_url: https://www.construtoraconfidence.com/favicon.png
 
@@ -13,7 +13,7 @@ collections:
     format: json
     folder: "public/_posts/portfolio_items" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{fields.titulo}}-{{year}}-{{month}}-{{day}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{titulo}}-{{year}}-{{month}}-{{day}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       #- {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Título", name: "titulo", widget: "string"}
