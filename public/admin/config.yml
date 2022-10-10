@@ -4,7 +4,6 @@ backend:
 
 publish_mode: editorial_workflow
 media_folder: "public/uploads"
-public_folder: "/images/uploads"
 show_preview_links: false
 logo_url: https://www.construtoraconfidence.com/favicon.png
 
