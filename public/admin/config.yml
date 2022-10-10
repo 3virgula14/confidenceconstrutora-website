@@ -2,16 +2,20 @@ backend:
   name: git-gateway
   branch: master #
 
+media_folder: "/uploads"
+public_folder: "https://construtoraconfidence.com/"
 publish_mode: editorial_workflow
 show_preview_links: false
 logo_url: https://www.construtoraconfidence.com/favicon.png
-
+media_library:
+  name: uploadcare
+  
 collections:
   - name: "portfolio_items" # Used in routes, e.g., /admin/collections/portfolio_items
-    media_folder: "/uploads"
-    public_folder: "https://construtoraconfidence.com/"
     label: "Portifólio" # Used in the UI
     format: json
+    media_folder: '/{{media_folder}}'
+    public_folder: '/{{public_folder}}'
     folder: "public/_posts/portfolio_items" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{fields.titulo}}-{{year}}-{{month}}-{{day}}" # Filename template, e.g., YYYY-MM-DD-title.md
