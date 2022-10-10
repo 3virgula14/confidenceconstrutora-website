@@ -15,7 +15,7 @@ collections:
     label: "Portifólio" # Used in the UI
     format: json
     media_folder: '{{media_folder}}'
-    public_folder: '{{public_folder}}'
+    public_folder: '{{public_folder}}/uploads'
     folder: "public/_posts/portfolio_items" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{fields.titulo}}-{{year}}-{{month}}-{{day}}" # Filename template, e.g., YYYY-MM-DD-title.md
