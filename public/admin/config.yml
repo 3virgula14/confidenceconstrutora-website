@@ -3,8 +3,8 @@ backend:
   branch: master #
 media_library:
   name: uploadcare
-media_folder: "/uploads/"
-public_folder: "/uploads/"
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 publish_mode: editorial_workflow
 show_preview_links: false
 logo_url: https://www.construtoraconfidence.com/favicon.png
