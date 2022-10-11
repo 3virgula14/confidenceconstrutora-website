@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Trade Gothic';
+  src: url('Trade\ Gothic\ LT.ttf');
+}
+@font-face {
+  font-family: 'DNI';
+  src: url('dni_bigfontsite.com.ttf');
+}
+
+body {
+  background-color: #e2ddda;
+  font-family: 'Trade Gothic';
+}
+
 /**
  * WHAT IS THIS FILE?
  *
@@ -13,11 +27,7 @@
   --qwik-dark-purple: #713fc2;
 }
 
-body {
-  background-color: #e2ddda;
-  font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  padding: 20px 20px 40px 20px;
-}
+
 
 main {
   max-width: 760px;
