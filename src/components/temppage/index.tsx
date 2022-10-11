@@ -129,7 +129,7 @@ Start numbering with offset:
   return (
   <div id="temp_page" style="">
     <div id="bg-wrapper">
-      
+
       <div className={`fundo 
         ${state.opacity_class? opacity_class_css: ""}`}
         style={{backgroundImage: `url("${state.bg}")`}}
@@ -146,10 +146,14 @@ Start numbering with offset:
                   state.bg = d.src;
                 }, 250)
                 if(e.target){
-                  let test = e.target.parentElement.classList.contains(actived_class_css)
-                  e.target.parentElement.classList[`${!test? "add": "remove"}`](actived_class_css) 
+                  let test:boolean = (e.target as any).target.parentElement.classList.contains(actived_class_css)
+                  if(test != undefined) (e.target as any).target.parentElement.classList[`${test==false ? "add": "remove"}`](actived_class_css) 
 
-                  if(!test) document.querySelector("#img-galery").scrollTop = 0
+                  if(!test) {
+                    let imgGlr = document.querySelector("#img-galery")
+                    if(imgGlr!=null)
+                      imgGlr.scrollTop = 0
+                  }
                 }
               }}
             src={d.src} alt={d.alt} />
