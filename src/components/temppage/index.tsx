@@ -146,8 +146,8 @@ Start numbering with offset:
                   state.bg = d.src;
                 }, 250)
                 if(e.target){
-                  let test:boolean = (e.target as any).target.parentElement.classList.contains(actived_class_css)
-                  if(test != undefined) (e.target as any).target.parentElement.classList[`${test==false ? "add": "remove"}`](actived_class_css) 
+                  let test:boolean = (e.target as any).parentElement.classList.contains(actived_class_css)
+                  if(test != undefined) (e.target as any).parentElement.classList[`${test==false ? "add": "remove"}`](actived_class_css) 
 
                   if(!test) {
                     let imgGlr = document.querySelector("#img-galery")
