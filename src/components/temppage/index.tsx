@@ -123,7 +123,7 @@ Start numbering with offset:
 `
     }]
   
-  let e_h = (110 / (mockData[0].photos.length / 3)) + "%"
+  let e_h = "300px"
   let DescFull =  () => md().render(mockData[0].d_full)
 
   return (
