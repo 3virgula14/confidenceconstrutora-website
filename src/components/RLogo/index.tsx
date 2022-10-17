@@ -10,7 +10,7 @@ export interface RLogoProps{
     dataIndex: number,    
     dataIndexAttribute: string,
     data: any,
-    location: string
+    location: string,
 }
 
  interface NavigatorStateStruct {
@@ -67,6 +67,7 @@ export default  component$((props: RLogoProps) => {
                         </a>
                 </span>
             </div>
+            <Slot/>
             <div id="img">
             <img onClick$={(e)=> {
                 let parentNode = ((e.target as HTMLElement).parentNode as any)
