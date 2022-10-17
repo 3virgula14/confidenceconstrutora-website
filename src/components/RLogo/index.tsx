@@ -51,8 +51,7 @@ export default  component$((props: RLogoProps) => {
     let NavigatorLocalState:NavigatorStateStruct = useContext(NavigationContext) as NavigatorStateStruct;
 
     return (
-        <div
-            id="LogoNavigator">
+        <div id="LogoNavigator">
             <div id="bar">
                 <title>{(props.data[parseInt(props.location)-1] || {title:""}).title}</title>
                 <span style={{
