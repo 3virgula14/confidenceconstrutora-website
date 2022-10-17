@@ -56,6 +56,8 @@ export default  component$((props: RLogoProps) => {
                         justify-content: space-between;
                         border-right: 2px solid #333333e6;
                         padding-right: 26px;
+                        color: #222;
+                        text-decoration: none;
                     "
                     ><a href="/sobre">Quem Somos</a><a  href="/porfolio">Portfólio</a></div>
                 
