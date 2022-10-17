@@ -67,7 +67,7 @@ export default  component$((props: RLogoProps) => {
                         </a>
                 </span>
             </div>
-            <Slot/>
+            {props.children}
             <div id="img">
             <img onClick$={(e)=> {
                 let parentNode = ((e.target as HTMLElement).parentNode as any)
