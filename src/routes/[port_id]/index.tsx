@@ -28,7 +28,7 @@ export default component$(() => {
     <div id="whole">
       <RLogo 
         location={location.params.port_id}
-        data={mockData[state.dataType as any]} 
+        data={mockData["portfolio"]} 
         dataIndex={state.dataIndex} 
         dataIndexAttribute={state.dataIndexAttribute}/>
       <RPortfolio 
