@@ -42,13 +42,8 @@ export default  component$((props: RLogoProps) => {
     }
 
     let LogoRestMode:LogoRestModeProps = useContext(LogoRestModeContext) as LogoRestModeProps;
-    let computRestMode = () => {
-        setTimeout(()=>{LogoRestMode.activated=false}, 2000)
-        return `animate__slideInDown ${LogoRestMode.activated? "activated":""}`
-    }
-    
 
-    let NavigatorLocalState:NavigatorStateStruct = useContext(NavigationContext) as NavigatorStateStruct;
+    let NavigatorLocalState:any = useContext(NavigationContext) as any;
 
     return (
         <div id="LogoNavigator">
@@ -61,17 +56,17 @@ export default  component$((props: RLogoProps) => {
                         gap: "3px",
                         pointerEvents: "all"}}>
 
-                    <a onClick$={() => { window.location = parseInt(props.location)- 2 }>
+                    <a onClick$={() => { NavigatorLocalState.dataIndex = parseInt(props.location)- 2 }>
                         <svg style={{transform: "rotate(180deg)"}} class="wh-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                     </a>
                     <span>{driverParam2()}/{props.data.length}</span>
                     
-                    <a onClick$={() => {  window.location = parseInt(props.location) + 1 }>
+                    <a onClick$={() => {  NavigatorLocalState.dataIndex = parseInt(props.location) + 1 }>
                         <svg class="wh-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                     </a>
                 </span>
             </div>
-            <div id="img" class={computRestMode()}>
+            <div id="img">
             <img onClick$={(e)=> {
                 let parentNode = ((e.target as HTMLElement).parentNode as any)
                 let contains = parentNode.classList.contains("activated");
