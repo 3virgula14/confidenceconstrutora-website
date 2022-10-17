@@ -46,8 +46,10 @@ export default  component$((props: RLogoProps) => {
             id="LogoNavigator">
             <div id="bar">
                 <title>{(props.data[parseInt(props.location)-1] || {title:""}).title}</title>
-                <span style={{  display: "flex",
-                        flexDirection: "column",
+                <span style={{
+                        alignItems: "center",
+                        display: "flex",
+                        flexDirection: "row",
                         gap: "3px",
                         pointerEvents: "all"}}>
 
