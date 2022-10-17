@@ -11,7 +11,6 @@ export interface RLogoProps{
     dataIndexAttribute: string,
     data: any,
     location: string,
-    children: any
 }
 
  interface NavigatorStateStruct {
