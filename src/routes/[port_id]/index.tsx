@@ -27,7 +27,6 @@ export default component$(() => {
   return (
     <div id="whole">
       <RLogo 
-        location={location.params.port_id}
         data={mockData["portfolio"]} 
         dataIndex={state.dataIndex} 
         dataIndexAttribute={state.dataIndexAttribute}/>
