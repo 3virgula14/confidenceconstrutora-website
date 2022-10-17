@@ -73,12 +73,12 @@ export default  component$((props: RLogoProps) => {
                         cursor: "pointer",
                         pointerEvents: "all"}}>
 
-                    <a onClick$={() => { NavigatorLocalState.dataIndex = parseInt(props.location) - 1 }}>
+                    <a href$={ parseInt(props.location) - 1 }>
                         <svg style={{transform: "rotate(180deg)"}} class="wh-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                     </a>
                     <span>{driverParam2()}/{props.data.length}</span>
                     
-                        <a onClick$={() => {  NavigatorLocalState.dataIndex = parseInt(props.location) + 1 }}>
+                        <a href$={ parseInt(props.location) + 1 }>
                             <svg class="wh-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                         </a>
                 </span>
