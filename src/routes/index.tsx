@@ -27,7 +27,7 @@ export default component$(() => {
   return (
     <div id="whole">
       <RLogo 
-        location={1}
+        location={"1"}
         data={mockData["portfolio"]} 
         dataIndex={state.dataIndex} 
         dataIndexAttribute={state.dataIndexAttribute}/>
