@@ -30,7 +30,12 @@ export default component$(() => {
         location={"1"}
         data={mockData["portfolio"]} 
         dataIndex={state.dataIndex} 
-        dataIndexAttribute={state.dataIndexAttribute}/>
+        dataIndexAttribute={state.dataIndexAttribute}>
+        <div>
+          <a> Quem Somos </a>
+          <a> Portfólio </a>
+        </div>
+      </RLogo>
       <RPortfolio 
         descs={c_data.descs}
         photos={c_data.photos}
