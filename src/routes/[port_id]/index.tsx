@@ -22,7 +22,7 @@ export default component$(() => {
 
   const location = useLocation();
   // console.log("Location: ", location)
-  let c_data = mockData[state.dataType as any][state.dataIndex];
+  let c_data = mockData["portfolio"][state.dataIndex]; //todo: link mockData and dataType together
   
   return (
     <div id="whole">
