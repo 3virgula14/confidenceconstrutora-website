@@ -56,10 +56,13 @@ export default  component$((props: RLogoProps) => {
                         justify-content: space-between;
                         border-right: 2px solid #333333e6;
                         padding-right: 26px;
-                        color: #222;
-                        text-decoration: none;
+                        pointer-events: all;
                     "
-                    ><a href="/sobre">Quem Somos</a><a  href="/porfolio">Portfólio</a></div>
+                    >
+                    <a style="color: #222;
+                        text-decoration: none;" href="/sobre">Quem Somos</a>
+                    <a style="color: #222;
+                        text-decoration: none;"   href="/porfolio">Portfólio</a></div>
                 
                 <title>{(props.data[parseInt(props.location)-1] || {title:""}).title}</title>
                 <span style={{
