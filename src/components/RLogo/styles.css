@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap');
+@font-face {
+    font-family: 'Trade Gothic';
+    src: url('Trade\ Gothic\ LT.ttf');
+  }
+  @font-face {
+    font-family: 'DNI';
+    src: url('dni_bigfontsite.com.ttf');
+  }
+
+  
+
+#LogoNavigator{
+    display: flex;
+    width: 100%;
+    overflow: visible;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 3000;
+    pointer-events: none;
+    backdrop-filter: saturate(2.5) blur(6px);
+    transition: all 0.25s;
+}
+
+#LogoNavigator.lowpage{
+    backdrop-filter: none;
+    background-color: #0b0b0e85;
+}
+
+#bar{
+    display: flex;
+    width: 100vw;
+    padding-inline: 3em;
+    padding-right: 1em;
+    height: 6em;
+    align-items: center;
+    justify-content: end;
+    font-size: 12pt;
+    border-color: #ffffffd9;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+title{
+    display: block;
+    font-size: 12pt;
+    padding-inline: 30px;
+    color: #202020;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+.wh-24{
+    width: 24px
+}
+#bar span{
+
+    color: #1e361f;
+    padding-inline: 15px;
+
+}
+
+
+
+#LogoNavigator #img img{
+    position: absolute;
+    width: 159%;
+    left: -30%;
+    top: -15%;
+}
+
+#img-galery .item.actived span{
+    width: 300px;
+}
+
+/* Animação de entrada */
+
+
+#LogoNavigator #img{
+    border-radius: 10px;
+    position: absolute;
+    margin-right: 3vw;
+    border: 1px solid #955757;
+    left: 33px;
+    width: 62px;
+    height: 62px;
+    top: 15px;
+    opacity: 0.85;
+    overflow: hidden;
+    display: flex;
+    transition: all 0.25s;
+    z-index: 400000;
+    pointer-events: all;
+}
+
+#LogoNavigator #img:hover{
+    transform: scale(1.05);
+    opacity: 1;
+    cursor: pointer;
+}
+
+#LogoNavigator #img.activated {
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background-color: #e2ddda;
+    opacity: 1;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#LogoNavigator #img.activated img {
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    top: 20%;
+}
+

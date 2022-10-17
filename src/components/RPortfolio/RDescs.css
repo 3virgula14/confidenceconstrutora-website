@@ -1,0 +1,14 @@
+section {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 4vw;
+  }
+  
+  section:first-child {
+    background: #ededed;
+    font-family: 'Kelly Slab', cursive;
+  }
+  
+  section:last-child {
+    font-family: 'Frank Ruhl Libre', serif;
+  }

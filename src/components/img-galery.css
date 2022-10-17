@@ -1,0 +1,46 @@
+#img-galery {
+    height: 100vh;
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: visible;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    padding-top: 0;
+    margin: 0 auto;
+    width: 100vw;
+}
+#img-galery:after {
+    content: "";
+    flex-grow: 999;
+}
+#img-galery .item {
+    flex: 1 1 auto;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    order: 1;
+    transform: scale(1);
+    transition: all .25s;
+    overflow: visible;
+}
+#img-galery .item.actived {
+    z-index: 1001;
+    order: 0;
+    width: 100%;
+    height: 100vh!important;
+}
+#img-galery .item>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#img-galery .item span {
+    position: absolute;
+    bottom: 4%;
+    right: 4%;
+    width: 0px;
+    overflow: hidden;
+    text-align: right;
+}

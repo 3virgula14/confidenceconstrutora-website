@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Trade Gothic';
+    src: url('../../../Trade\ Gothic\ LT.ttf')  format('truetype');
+  }
+  @font-face {
+    font-family: 'DNI';
+    src: url('../../../public/DIN-Regular.ttf')  format('truetype');
+}

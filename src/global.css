@@ -8,8 +8,9 @@
 }
 
 body {
-  background-color: #e2ddda;
   font-family: 'Trade Gothic';
+  padding: 0px;
+  margin: 0px;
 }
 
 /**

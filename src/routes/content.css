@@ -1,0 +1,31 @@
+#content {
+    display: grid;
+    padding: 70px 2em 2em;
+    background-color: #e2ddda;
+    z-index: 102;
+    position: relative;
+    width: calc(80% - 4em);
+    margin: 0 auto;
+    font-family: Trade Gothic;
+}
+
+#content h1.actived {
+    font-size: 32px;
+    top: -105vh;
+    z-index: 1002;
+    padding: 2rem;
+    width: fit-content;
+    left: -2em;
+}
+
+#content h1 {
+    position: absolute;
+    font-size: 61px;
+    top: -85vh;
+    width: 70vw;
+    pointer-events: none;
+    transition: font-size .1s;
+    font-family: DNI;
+    font-weight: 100;
+    text-shadow: 0px 0px 2px rgb(255 255 255 / 55%);
+}
