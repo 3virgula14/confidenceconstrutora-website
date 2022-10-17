@@ -48,6 +48,9 @@ export default  component$((props: RLogoProps) => {
     return (
         <div id="LogoNavigator">
             <div id="bar">
+                
+                <div id="nav_links"><a>Quem Somos</a><a>Portfólio</a></div>
+                
                 <title>{(props.data[parseInt(props.location)-1] || {title:""}).title}</title>
                 <span style={{
                         alignItems: "center",
