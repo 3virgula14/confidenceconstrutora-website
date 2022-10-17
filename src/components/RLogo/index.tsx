@@ -49,7 +49,15 @@ export default  component$((props: RLogoProps) => {
         <div id="LogoNavigator">
             <div id="bar">
                 
-                <div id="nav_links"><a>Quem Somos</a><a>Portfólio</a></div>
+                <div id="nav_links"
+                    style="
+                        width: 200px;
+                        display: flex;
+                        justify-content: space-between;
+                        border-right: 2px solid #333333e6;
+                        padding-right: 26px;
+                    "
+                    ><a href="/sobre">Quem Somos</a><a  href="/porfolio">Portfólio</a></div>
                 
                 <title>{(props.data[parseInt(props.location)-1] || {title:""}).title}</title>
                 <span style={{
