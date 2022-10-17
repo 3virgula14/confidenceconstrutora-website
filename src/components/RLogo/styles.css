@@ -113,8 +113,8 @@ title{
 
 #LogoNavigator #img.activated img {
     position: absolute;
-    width: 40%;
-    left: 30%;
-    top: 20%;
+    width: 30vw;
+    left: 20vw;
+    top: 20vh;
 }
 
