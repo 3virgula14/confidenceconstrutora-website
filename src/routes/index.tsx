@@ -5,8 +5,8 @@ import RLogo from '~/components/RLogo';
 import RPortfolio from '~/components/RPortfolio';
 import mockData from "../../../public/mockData.json";
 
-import "../../components/img-galery.css";
-import "../content.css"
+import "../components/img-galery.css";
+import "./content.css"
 
 export default component$(() => {
   const state = useStore({
