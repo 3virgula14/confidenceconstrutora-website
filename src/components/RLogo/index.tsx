@@ -44,7 +44,8 @@ export default  component$((props: RLogoProps) => {
     let LogoRestMode:LogoRestModeProps = useContext(LogoRestModeContext) as LogoRestModeProps;
 
     let NavigatorLocalState:any = useContext(NavigationContext) as any;
-
+    console.log(NavigatorLocalState);
+    
     return (
         <div id="LogoNavigator">
             <div id="bar">
