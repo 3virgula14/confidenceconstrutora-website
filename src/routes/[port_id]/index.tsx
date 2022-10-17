@@ -29,6 +29,7 @@ export default component$(() => {
       <RLogo 
         data={mockData["portfolio"]} 
         dataIndex={state.dataIndex} 
+        location=""
         dataIndexAttribute={state.dataIndexAttribute}/>
       <RPortfolio 
         descs={c_data.descs}
