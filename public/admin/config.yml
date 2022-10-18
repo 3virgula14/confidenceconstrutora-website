@@ -30,7 +30,7 @@ collections:
             name: sessao
             widget: "object"
             fields: 
-              - {label: "Foto". name: "foto", widget: "image"}
+              - {label: "Foto", name: "foto", widget: "image"}
               - {label: "Título", name: "titulo", widget: "string"}
               - {label: "Descrição curta", name: "shortstory", widget: "text"}
               - {label: "Descrição longa", name: "tailstory", widget: "text"}
