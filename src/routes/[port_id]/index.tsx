@@ -20,7 +20,8 @@ export default component$(() => {
 
   useContextProvider(NavigationContext, state);
   
-  let c_data = mockData[state.dataType][state.dataIndex-1]; //todo: link mockData and dataType together
+  let derivedData = JSON.parse(JSON.stringify(mockData))
+  let c_data = derivedData[state.dataType as string][(parseInt(state.dataIndex) | 0)-1]; //todo: link mockData and dataType together
   let indexStr= state.dataIndex.toString();
 
   return (
