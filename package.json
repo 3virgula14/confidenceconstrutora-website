@@ -6,7 +6,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "qwik build",
+    "build": "node collect_items_into_json.js && qwik build",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.static": "vite build --ssr src/entry.static.tsx",

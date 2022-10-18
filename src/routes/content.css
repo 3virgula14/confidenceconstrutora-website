@@ -1,12 +1,12 @@
 #content {
     display: grid;
-    padding: 70px 2em 2em;
+    padding: 60px 5em 5em;
     background-color: #e2ddda;
     z-index: 102;
     position: relative;
     width: calc(80% - 4em);
     margin: 0 auto;
-    margin-top: 5vw;
+    margin-top: 3vw;
     font-family: Trade Gothic;
 }
 

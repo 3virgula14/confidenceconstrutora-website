@@ -28,7 +28,7 @@ collections:
         fields:
           - label: Conteúdo
             name: sessao
-            widget: "object"
+            widget: "list"
             fields: 
               - {label: "Foto", name: "foto", widget: "image"}
               - {label: "Título", name: "titulo", widget: "string"}

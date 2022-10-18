@@ -1,0 +1,78 @@
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #5e1e14;
+    height: 300px;
+    margin-top: 250px;
+}
+
+footer .cartao{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    margin-top: -190px;
+}
+
+footer .campos{
+    background-color: #e2ddda;
+    width: calc(100% - 255px);
+    align-self: flex-end;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    padding-left: 270px;
+    z-index: 2;
+}
+
+footer .cartao img{
+    position: relative;
+    left: 0px;
+    width: fit-content;
+    height: 170px;
+    margin-top: 20px;
+    margin-bottom: -180px;
+    margin-left: -271px;
+}
+
+footer .campos >div{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+footer .campos input{
+    width: 46%;
+    z-index: 2;
+}
+
+footer .campos [type="textarea"]{
+    height: 80px;
+    width: 100%;
+}
+
+
+
+footer .info ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 15px;
+    justify-content: space-between;
+    padding-inline: 40px;
+}
+
+footer .info{
+    padding: 15px;
+    width: calc(100% );
+    align-self: flex-end;
+    background-color: #020304;
+    color: aliceblue;
+}
