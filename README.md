@@ -16,3 +16,8 @@ Website da Construtura Confidence de Vitória da Conquista
 # A Fzer
  - Criar uma galeria "central", onde você arrasta, expande e move com o mouse e seus botões, podendo se mover para todas as direções, resolvemos deixar no meio da galeria
 
+## Static Site Generator (Node.js)
+
+```
+npm run ssg
+```
