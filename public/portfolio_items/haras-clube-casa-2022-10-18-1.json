@@ -1,0 +1,16 @@
+{
+  "titulo": "Haras Clube - Casa",
+  "sessions": [
+    {
+      "foto": "https://construtoraconfidence.com/uploads/img_20221017_104004.jpg",
+      "titulo": "Frente da casa",
+      "shortstory": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius sagittis dui. Nam lacus odio, lobortis ullamcorper tellus vel, rhoncus posuere nulla. Pellentesque posuere mi in libero ornare tin",
+      "tailstory": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius sagittis dui. Nam lacus odio, lobortis ullamcorper tellus vel, rhoncus posuere nulla. Pellentesque posuere mi in libero ornare tin",
+      "mdsession": "**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius sagittis dui. Nam lacus odio, lobortis ullamcorper tellus vel, rhoncus posuere nulla. Pellentesque posuere mi in libero ornare tin**"
+    }
+  ],
+  "story,": {
+    "twitterlike": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius sagittis dui. Nam lacus odio, lobortis ullamcorper tellus vel, rhoncus posuere nulla. Pellentesque posuere mi in libero ornare tincidunt. Phasellus posuere, augue id euismod blandit, erat orci placerat sem, nec dapibus dui quam eget felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Sed dictum, elit ac vulputate posuere, arcu leo feugiat leo, a egestas pur",
+    "2paraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius sagittis dui. Nam lacus odio, lobortis ullamcorper tellus vel, rhoncus posuere nulla. Pellentesque posuere mi in libero ornare tincidunt. Phasellus posuere, augue id euismod blandit, erat orci placerat sem, nec dapibus dui quam eget felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Sed dictum, elit ac vulputate posuere, arcu leo feugiat leo, a egestas pur"
+  }
+}
