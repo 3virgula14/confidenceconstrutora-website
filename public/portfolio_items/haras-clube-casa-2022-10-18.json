@@ -1,0 +1,18 @@
+{
+  "titulo": "Haras Clube - Casa",
+  "sessions": [
+    {
+      "sessao": {
+        "foto": "https://construtoraconfidence.com/uploads/img_20221017_104004.jpg",
+        "titulo": "Frente da casa",
+        "shortstory": "Com ## metros, essa entrada apresenta a arquitetura e engenharia que somos capazes de apresentar.",
+        "tailstory": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius sagittis dui. Nam lacus odio, lobortis ullamcorper tellus vel, rhoncus posuere nulla. Pellentesque posuere mi in libero ornare tincidunt. Phasellus posuere, augue id euismod blandit, erat orci placerat sem, nec dapibus dui quam eget felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Sed dictum, elit ac vulputate posuere, arcu leo feugiat leo, a egestas purus nisl eu risus. Donec vitae gravida quam. Quisque eu diam efficitur, tempor nisi at, molestie nunc. Donec egestas ut orci tristique iaculis. Etiam imperdiet magna id orci facilisis, ac cursus lorem suscipit. Sed tortor odio, sollicitudin vel finibus imperdiet, accumsan tincidunt lacus.",
+        "mdsession": "![Frente da casa](https://construtoraconfidence.com/uploads/img_20221017_104004.jpg \"Casa - Frente\")\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius sagittis dui. Nam lacus odio, lobortis ullamcorper tellus vel, rhoncus posuere nulla. Pellentesque posuere mi in libero ornare tincidunt. Phasellus posuere, augue id euismod blandit, erat orci placerat sem, nec dapibus dui quam eget felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Sed dictum, elit ac vulputate posuere, arcu leo feugiat leo, a egestas pur"
+      }
+    }
+  ],
+  "story,": {
+    "twitterlike": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius sagittis dui. Nam lacus odio, lobortis ullamcorper tellus vel, rhoncus posuere nulla. Pellentesque posuere mi in libero ornare tincidunt. Phasellus posuere, augue id euismod blandit, erat orci placerat sem, nec dapibus dui quam eget felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Sed dictum, elit ac vulputate posuere, arcu leo feugiat leo, a egestas pur",
+    "2paraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius sagittis dui. Nam lacus odio, lobortis ullamcorper tellus vel, rhoncus posuere nulla. Pellentesque posuere mi in libero ornare tincidunt. Phasellus posuere, augue id euismod blandit, erat orci placerat sem, nec dapibus dui quam eget felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Sed dictum, elit ac vulputate posuere, arcu leo feugiat leo, a egestas pur"
+  }
+}
