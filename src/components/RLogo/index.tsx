@@ -26,7 +26,7 @@ export default  component$((props: RLogoProps) => {
     let NavigatorLocalState:NavigatorStateStruct = useContext(NavigationContext) as NavigatorStateStruct;
     let tes = NavigatorLocalState.dataIndex;
     const handleHrefLimites = (portifolioIndex:number) => {
-        if(portifolioIndex<=0 || portifolioIndex>props.data.length) return "#"
+        if(portifolioIndex<=0 || portifolioIndex>=props.data.length) return "#"
         return `${portifolioIndex}`
     }
     console.log("tes", NavigatorLocalState)
