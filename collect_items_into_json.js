@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.readdir(__dirname+"/public/portfolio_items", (err, files) => {
+fs.readdir(__dirname+"/dist/public/portfolio_items", (err, files) => {
     if (err)
       console.log(err);
     else {
