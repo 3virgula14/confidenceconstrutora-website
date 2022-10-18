@@ -1,3 +1,10 @@
 [build]
 publish = "dist"
-command = "npm run ssg && npm run build"
+command = "node server/entry.static && npm run build"
+
+[[edge_functions]]
+path = "/*"
+function = "entry.netlify-edge"
+
+[dev]
+framework = "#static"
