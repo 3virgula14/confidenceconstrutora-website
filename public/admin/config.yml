@@ -11,28 +11,34 @@ media_library:
   name: uploadcare
   
 collections:
-  - name: "portfolio_items" # Used in routes, e.g., /admin/collections/portfolio_items
-    label: "Portifólio" # Used in the UI
+  - name: "portfolio_items" # Used in routes, e.g., /admin/collections/sections
+    label: "Sessão de portfólio" # Used in the UI
     format: json
     public_folder: 'https://construtoraconfidence.com/uploads'
-    folder: "public/_posts/portfolio_items" # The path to the folder where the documents are stored
+    folder: "public/portfolio_items/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{fields.titulo}}-{{year}}-{{month}}-{{day}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       #- {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Título", name: "titulo", widget: "string"}
-      - label: "Galeria de imagens"
-        name: "photos"
+      - label: "Galeria de Sessões"
+        name: "sessions"
         widget: "list"
-        summary: '{{fields.image}}'
         allow_add: true
         fields:
-          - label: Imagem
-            name: image
-            widget: "image"
-            choose_url: true
-            media_library:
-              config:
-                multiple: true
-      - {label: "Descrição curta", name: "d_short", widget: "text"}
-      - {label: "Descrição completa", name: "d_full", widget: "markdown"}
+          - label: Conteúdo
+            name: sessao
+            widget: "object"
+            fields: 
+              - {label: "Foto". name: "foto", widget: "image"}
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Descrição curta", name: "shortstory", widget: "text"}
+              - {label: "Descrição longa", name: "tailstory", widget: "text"}
+              - {label: "MD Session", name: "mdsession", widget: "markdown"}
+              
+      - label: "Story"
+        name: story,
+        widget: "object"
+        fields:
+          - {label: "Descrição curta", name: "twitterlike", widget: "text"}
+          - {label: "Descrição longa", name: "2paraph", widget: "markdown"}
