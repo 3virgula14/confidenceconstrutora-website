@@ -25,16 +25,12 @@ collections:
         name: "sessions"
         widget: "list"
         allow_add: true
-        fields:
-          - label: Conteúdo
-            name: sessao
-            widget: "list"
-            fields: 
-              - {label: "Foto", name: "foto", widget: "image"}
-              - {label: "Título", name: "titulo", widget: "string"}
-              - {label: "Descrição curta", name: "shortstory", widget: "text"}
-              - {label: "Descrição longa", name: "tailstory", widget: "text"}
-              - {label: "MD Session", name: "mdsession", widget: "markdown"}
+        fields: 
+          - {label: "Foto", name: "foto", widget: "image"}
+          - {label: "Título", name: "titulo", widget: "string"}
+          - {label: "Descrição curta", name: "shortstory", widget: "text"}
+          - {label: "Descrição longa", name: "tailstory", widget: "text"}
+          - {label: "MD Session", name: "mdsession", widget: "markdown"}
               
       - label: "Story"
         name: story,
