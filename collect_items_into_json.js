@@ -6,10 +6,10 @@ fs.readdir(__dirname+"/dist/public/portfolio_items", (err, files) => {
     else {
         let fileContentArr = []
         files.forEach(file => {
-            const data = fs.readFileSync(__dirname+"/public/portfolio_items/"+file, 'utf8');
+            const data = fs.readFileSync(__dirname+"/dist/public/portfolio_items/"+file, 'utf8');
             fileContentArr+= data;
         })
         let finaljson = JSON.parse(`{"portfolio":[${fileContentArr}]}`)
-        fs.writeFile(__dirname+"/public/data.json", JSON.stringify(finaljson), (err) =>{})
+        fs.writeFile(__dirname+"/dist/public/data.json", JSON.stringify(finaljson), (err) =>{})
     }
   })
