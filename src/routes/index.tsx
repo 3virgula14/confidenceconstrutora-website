@@ -2,7 +2,7 @@ import { component$, useContext, useContextProvider, useStore } from '@builder.i
 import {  NavigationContext } from '~/components/L';
 import RLogo from '~/components/RLogo';
 import RPortfolio from '~/components/RPortfolio';
-import mockData from "../../dist/public/mockData.json";
+import mockData from "~/mockData.json";
 
 import "../components/img-galery.css";
 import "./content.css"
