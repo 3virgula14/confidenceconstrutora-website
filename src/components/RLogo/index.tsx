@@ -1,13 +1,12 @@
 import { component$, useStore,
-    useContextProvider,
-    createContext,
-    useContext, } from '@builder.io/qwik';
+    useContext,
+    } from '@builder.io/qwik';
 import { LogoRestModeProps } from '~/types';
 import { LogoRestModeContext, NavigationContext, PageTypes, PortfolioPageProps } from '../L';
 
 
 export interface RLogoProps{
-    dataIndex: number,    
+    dataIndex: string,    
     dataIndexAttribute: string,
     data: any,
     location: string,
@@ -22,28 +21,15 @@ export interface RLogoProps{
 import "./styles.css";
 
 export default  component$((props: RLogoProps) => {   
-    const state = useStore({
-        lowPage: false
-    })
-    
-    let driverParam2 = (flag?: string, value?: number) => {
-            if(!(flag && value)) return parseInt(props.location)
-            if(flag == ("+"))
-                if((parseInt(props.location) + value) <= props.data.length)
-                    return parseInt(props.location) + value
-                else return (parseInt(props.location))
-            
-                    
-            if(flag == ("-")) {
-                if((parseInt(props.location) - value) > 0)
-                    return (parseInt(props.location) - value)
-                else return (parseInt(props.location))
-            }
+
+
+    let NavigatorLocalState:NavigatorStateStruct = useContext(NavigationContext) as NavigatorStateStruct;
+    let tes = NavigatorLocalState.dataIndex;
+    const handleHrefLimites = (portifolioIndex:number) => {
+        if(portifolioIndex<=0 || portifolioIndex>props.data.length) return "#"
+        return `${portifolioIndex}`
     }
-
-    let LogoRestMode:LogoRestModeProps = useContext(LogoRestModeContext) as LogoRestModeProps;
-
-    let NavigatorLocalState = useContext(NavigationContext) as any;
+    console.log("tes", NavigatorLocalState)
     
     return (
         <div id="LogoNavigator">
@@ -73,14 +59,14 @@ export default  component$((props: RLogoProps) => {
                         cursor: "pointer",
                         pointerEvents: "all"}}>
 
-                    <a href={ "#" }>
+                    <a href={handleHrefLimites(parseInt(props.location)-1)}>
                         <svg style={{transform: "rotate(180deg)"}} class="wh-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                     </a>
-                    <span>{driverParam2()}/{props.data.length}</span>
+                    <span>{parseInt(props.location)}/{props.data.length}</span>
                     
-                        <a href={ "#" }>
-                            <svg class="wh-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                        </a>
+                    <a href={handleHrefLimites(parseInt(props.location)+1)}>
+                        <svg class="wh-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </a>
                 </span>
             </div>
             

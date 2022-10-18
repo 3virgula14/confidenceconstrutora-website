@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap');
 @font-face {
     font-family: 'Trade Gothic';
-    src: url('Trade\ Gothic\ LT.ttf');
+    src: url('/Trade\ Gothic\ LT.ttf');
   }
   @font-face {
     font-family: 'DNI';
-    src: url('dni_bigfontsite.com.ttf');
+    src: url('/dni_bigfontsite.com.ttf');
   }
 
   

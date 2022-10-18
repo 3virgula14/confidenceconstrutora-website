@@ -1,6 +1,6 @@
 import { component$, useContext, useContextProvider, useStore } from '@builder.io/qwik';
 import { useLocation } from '@builder.io/qwik-city';
-import { LogoRestModeContext, NavigationContext } from '~/components/L';
+import {  NavigationContext } from '~/components/L';
 import RLogo from '~/components/RLogo';
 import RPortfolio from '~/components/RPortfolio';
 import mockData from "../../../public/mockData.json";
@@ -9,25 +9,24 @@ import "../../components/img-galery.css";
 import "../content.css"
 
 export default component$(() => {
+  
+  const location = useLocation();
+  
   const state = useStore({
-    dataIndex: 0,
+    dataIndex: location.params.port_id,
     dataIndexAttribute: "title",
     dataType: "portfolio"
   })
 
   useContextProvider(NavigationContext, state);
-
-  const logoRestModeInitialState = useStore({activated: true})
-  useContextProvider(LogoRestModeContext, logoRestModeInitialState)
-
-  const location = useLocation();
-  // console.log("Location: ", location)
-  let c_data = mockData["portfolio"][state.dataIndex]; //todo: link mockData and dataType together
   
+  let c_data = mockData[state.dataType][state.dataIndex-1]; //todo: link mockData and dataType together
+  let indexStr= state.dataIndex.toString();
+
   return (
     <div id="whole">
       <RLogo 
-        location={"1"}
+        location={indexStr}
         data={mockData["portfolio"]} 
         dataIndex={state.dataIndex} 
         dataIndexAttribute={state.dataIndexAttribute}>
